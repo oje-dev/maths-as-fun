@@ -8,6 +8,9 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     class Functions
     {
+        private void newFunction()
+        {
 
+        }
     }
 }
