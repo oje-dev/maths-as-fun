@@ -12,5 +12,10 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
 
         }
+
+        private void secondTestFunction()
+        {
+
+        }
     }
 }
