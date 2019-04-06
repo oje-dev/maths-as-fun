@@ -49,8 +49,8 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     Cursor = default;
                     ShowInTaskbar = true;
                     FormBorderStyle = FormBorderStyle.FixedSingle;
-                    Width = 952;
-                    Height = 379;
+                    Width = 965;
+                    Height = 395;
                     Location = new Point(Location.X - 200, Location.Y - 100);
                     break;
                 case 1010:
