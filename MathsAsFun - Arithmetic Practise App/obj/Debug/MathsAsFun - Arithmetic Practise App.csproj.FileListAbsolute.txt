@@ -1,0 +1,23 @@
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\bin\Debug\MathsAsFun - Arithmetic Practise App.exe.config
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\bin\Debug\MathsAsFun - Arithmetic Practise App.exe
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\bin\Debug\MathsAsFun - Arithmetic Practise App.pdb
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.csprojAssemblyReference.cache
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun___Arithmetic_Practise_App.frmLoadingScreen.resources
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun___Arithmetic_Practise_App.frmMainApplication.resources
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun___Arithmetic_Practise_App.Properties.Resources.resources
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.csproj.GenerateResource.cache
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.csproj.CoreCompileInputs.cache
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.exe
+C:\Users\olive\source\repos\oje-dev\mathsasfun\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.pdb
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\bin\Debug\MathsAsFun - Arithmetic Practise App.exe.config
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\bin\Debug\MathsAsFun - Arithmetic Practise App.exe
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\bin\Debug\MathsAsFun - Arithmetic Practise App.pdb
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.csprojAssemblyReference.cache
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun___Arithmetic_Practise_App.frmLoadingScreen.resources
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun___Arithmetic_Practise_App.frmMainApplication.resources
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun___Arithmetic_Practise_App.frmMultiplicationTable.resources
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun___Arithmetic_Practise_App.Properties.Resources.resources
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.csproj.GenerateResource.cache
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.csproj.CoreCompileInputs.cache
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.exe
+C:\Users\olive\source\MathsAsFun - Arithmetic Practise App\obj\Debug\MathsAsFun - Arithmetic Practise App.pdb
