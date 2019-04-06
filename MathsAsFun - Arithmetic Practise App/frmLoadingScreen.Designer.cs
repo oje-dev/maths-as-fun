@@ -53,7 +53,7 @@
             // lblCopyrightMessage
             // 
             this.lblCopyrightMessage.AutoSize = true;
-            this.lblCopyrightMessage.Location = new System.Drawing.Point(344, 357);
+            this.lblCopyrightMessage.Location = new System.Drawing.Point(184, 357);
             this.lblCopyrightMessage.Name = "lblCopyrightMessage";
             this.lblCopyrightMessage.Size = new System.Drawing.Size(264, 13);
             this.lblCopyrightMessage.TabIndex = 0;
@@ -61,9 +61,9 @@
             // 
             // prgLoading
             // 
-            this.prgLoading.Location = new System.Drawing.Point(176, 318);
+            this.prgLoading.Location = new System.Drawing.Point(12, 318);
             this.prgLoading.Name = "prgLoading";
-            this.prgLoading.Size = new System.Drawing.Size(600, 23);
+            this.prgLoading.Size = new System.Drawing.Size(608, 23);
             this.prgLoading.TabIndex = 2;
             // 
             // tmrProgressBar
@@ -119,9 +119,9 @@
             // imgLogo
             // 
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(176, 39);
+            this.imgLogo.Location = new System.Drawing.Point(12, 39);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(600, 273);
+            this.imgLogo.Size = new System.Drawing.Size(608, 273);
             this.imgLogo.TabIndex = 7;
             this.imgLogo.TabStop = false;
             // 
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 379);
+            this.ClientSize = new System.Drawing.Size(632, 379);
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.prgLoading);
             this.Controls.Add(this.lblCopyrightMessage);

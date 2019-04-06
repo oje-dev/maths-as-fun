@@ -49,6 +49,8 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     Cursor = default;
                     ShowInTaskbar = true;
                     FormBorderStyle = FormBorderStyle.FixedSingle;
+                    Width = 952;
+                    Height = 379;
                     Location = new Point(Location.X - 200, Location.Y - 100);
                     break;
                 case 1010:
@@ -63,7 +65,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     imgSigma.Enabled = true;
                     imgSigma.Visible = true;
                     break;
-                case 7000:
+                case 6900:
                     imgPi.Enabled = false;
                     imgPi.Visible = false;
                     break;
