@@ -16,7 +16,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainApplication());
+            Application.Run(new frmLoadingScreen());
         }
     }
 }

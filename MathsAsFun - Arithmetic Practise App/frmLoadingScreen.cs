@@ -47,7 +47,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     prgLoading.Visible = false;
                     lblCopyrightMessage.Visible = false;
                     Cursor = default;
-                    btnContinue.Visible = true;
                     ShowInTaskbar = true;
                     FormBorderStyle = FormBorderStyle.FixedSingle;
                     Location = new Point(Location.X - 200, Location.Y - 100);
@@ -75,6 +74,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 case 11500:
                     imgSigma.Enabled = false;
                     imgSigma.Visible = false;
+                    btnContinue.Visible = true;
                     timeElapsed = 1000;
                     break;
             }
