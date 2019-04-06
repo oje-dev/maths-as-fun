@@ -53,7 +53,7 @@
             // lblCopyrightMessage
             // 
             this.lblCopyrightMessage.AutoSize = true;
-            this.lblCopyrightMessage.Location = new System.Drawing.Point(346, 429);
+            this.lblCopyrightMessage.Location = new System.Drawing.Point(344, 357);
             this.lblCopyrightMessage.Name = "lblCopyrightMessage";
             this.lblCopyrightMessage.Size = new System.Drawing.Size(264, 13);
             this.lblCopyrightMessage.TabIndex = 0;
@@ -61,9 +61,9 @@
             // 
             // prgLoading
             // 
-            this.prgLoading.Location = new System.Drawing.Point(17, 389);
+            this.prgLoading.Location = new System.Drawing.Point(176, 318);
             this.prgLoading.Name = "prgLoading";
-            this.prgLoading.Size = new System.Drawing.Size(926, 23);
+            this.prgLoading.Size = new System.Drawing.Size(600, 23);
             this.prgLoading.TabIndex = 2;
             // 
             // tmrProgressBar
@@ -76,7 +76,7 @@
             // 
             this.imgPi.Enabled = false;
             this.imgPi.Image = ((System.Drawing.Image)(resources.GetObject("imgPi.Image")));
-            this.imgPi.Location = new System.Drawing.Point(17, 75);
+            this.imgPi.Location = new System.Drawing.Point(12, 12);
             this.imgPi.Name = "imgPi";
             this.imgPi.Size = new System.Drawing.Size(300, 300);
             this.imgPi.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             this.imgSigma.Enabled = false;
             this.imgSigma.Image = ((System.Drawing.Image)(resources.GetObject("imgSigma.Image")));
-            this.imgSigma.Location = new System.Drawing.Point(643, 75);
+            this.imgSigma.Location = new System.Drawing.Point(640, 12);
             this.imgSigma.Name = "imgSigma";
             this.imgSigma.Size = new System.Drawing.Size(300, 300);
             this.imgSigma.TabIndex = 4;
@@ -98,7 +98,7 @@
             // 
             this.imgTheta.Enabled = false;
             this.imgTheta.Image = ((System.Drawing.Image)(resources.GetObject("imgTheta.Image")));
-            this.imgTheta.Location = new System.Drawing.Point(330, 75);
+            this.imgTheta.Location = new System.Drawing.Point(326, 12);
             this.imgTheta.Name = "imgTheta";
             this.imgTheta.Size = new System.Drawing.Size(300, 300);
             this.imgTheta.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             // btnContinue
             // 
-            this.btnContinue.Location = new System.Drawing.Point(868, 416);
+            this.btnContinue.Location = new System.Drawing.Point(865, 344);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(75, 23);
             this.btnContinue.TabIndex = 6;
@@ -119,9 +119,9 @@
             // imgLogo
             // 
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(178, 75);
+            this.imgLogo.Location = new System.Drawing.Point(176, 39);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(600, 300);
+            this.imgLogo.Size = new System.Drawing.Size(600, 273);
             this.imgLogo.TabIndex = 7;
             this.imgLogo.TabStop = false;
             // 
@@ -129,14 +129,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 451);
+            this.ClientSize = new System.Drawing.Size(952, 379);
             this.Controls.Add(this.btnContinue);
-            this.Controls.Add(this.imgTheta);
-            this.Controls.Add(this.imgSigma);
-            this.Controls.Add(this.imgPi);
             this.Controls.Add(this.prgLoading);
             this.Controls.Add(this.lblCopyrightMessage);
             this.Controls.Add(this.imgLogo);
+            this.Controls.Add(this.imgTheta);
+            this.Controls.Add(this.imgSigma);
+            this.Controls.Add(this.imgPi);
             this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
