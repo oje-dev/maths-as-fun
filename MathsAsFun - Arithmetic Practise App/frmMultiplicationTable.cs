@@ -12,6 +12,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     public partial class FrmMultiplicationTable : Form
     {
+        FrmMainApplication frmMainApplication = new FrmMainApplication();
         public FrmMultiplicationTable()
         {
             InitializeComponent();
