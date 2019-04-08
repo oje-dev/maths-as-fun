@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMultiplicationTable));
             this.cboTimesTable = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grdTimesTable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTimesTable)).BeginInit();
             this.SuspendLayout();
             // 
             // cboTimesTable
@@ -49,32 +51,59 @@
             "10 Times Table",
             "11 Times Table",
             "12 Times Table"});
-            this.cboTimesTable.Location = new System.Drawing.Point(184, 12);
+            this.cboTimesTable.Location = new System.Drawing.Point(105, 12);
             this.cboTimesTable.MaxDropDownItems = 12;
             this.cboTimesTable.Name = "cboTimesTable";
             this.cboTimesTable.Size = new System.Drawing.Size(121, 21);
             this.cboTimesTable.TabIndex = 0;
             this.cboTimesTable.TabStop = false;
+            this.cboTimesTable.SelectedIndexChanged += new System.EventHandler(this.CboTimesTable_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // grdTimesTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(124, 61);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 1;
+            this.grdTimesTable.AllowUserToAddRows = false;
+            this.grdTimesTable.AllowUserToDeleteRows = false;
+            this.grdTimesTable.AllowUserToResizeColumns = false;
+            this.grdTimesTable.AllowUserToResizeRows = false;
+            this.grdTimesTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grdTimesTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grdTimesTable.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.grdTimesTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdTimesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdTimesTable.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdTimesTable.DefaultCellStyle = dataGridViewCellStyle1;
+            this.grdTimesTable.Location = new System.Drawing.Point(15, 50);
+            this.grdTimesTable.Name = "grdTimesTable";
+            this.grdTimesTable.ReadOnly = true;
+            this.grdTimesTable.RowHeadersVisible = false;
+            this.grdTimesTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.grdTimesTable.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.grdTimesTable.Size = new System.Drawing.Size(300, 278);
+            this.grdTimesTable.TabIndex = 1;
             // 
             // FrmMultiplicationTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 232);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(330, 340);
+            this.Controls.Add(this.grdTimesTable);
             this.Controls.Add(this.cboTimesTable);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMultiplicationTable";
-            this.Text = "frmMultiplicationTable";
+            this.ShowInTaskbar = false;
+            this.Text = "Multiplication Table";
             this.Load += new System.EventHandler(this.FrmMultiplicationTable_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTimesTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,6 +111,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cboTimesTable;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grdTimesTable;
     }
 }

@@ -21,9 +21,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 for (int j = 0; j < timesTable; j++)
                 {
                     timesTableArray[i, j] = timesTableArray[i, 0] * timesTableArray[j, 0];
-                    Console.Write(timesTableArray[i, j] + " ");
                 }
-                Console.WriteLine();
             }
             return timesTableArray;
         }
