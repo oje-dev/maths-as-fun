@@ -8,18 +8,23 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     class Functions
     {
-        public int[][] TimesTableArrayFunction(int timesTable)
+        public int[,] TimesTableArrayFunction(int timesTable)
         {
-            int[][] timesTableArray = new int[timesTable][];
-
-            for (int i = 0; i < timesTableArray.Length; i++)
+            int[,] timesTableArray = new int[timesTable, timesTable];
+            for (int i = 0; i < timesTable; i++)
             {
-                for (int j = 0; j < timesTableArray.Length; j++)
-                {
-                    timesTableArray[i][j] = j + 1;
-                }
+                timesTableArray[i, 0] = i + 1;
+                timesTableArray[0, i] = i + 1;
             }
-
+            for (int i = 0; i < timesTable; i++)
+            {
+                for (int j = 0; j < timesTable; j++)
+                {
+                    timesTableArray[i, j] = timesTableArray[i, 0] * timesTableArray[j, 0];
+                    Console.Write(timesTableArray[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
             return timesTableArray;
         }
     }
