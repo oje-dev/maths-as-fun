@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace MathsAsFun___Arithmetic_Practise_App
 {
-    public partial class frmMainApplication : Form
+    public partial class FrmMainApplication : Form
     {
-        public frmMainApplication()
+        Functions functions = new Functions();
+
+        public FrmMainApplication()
         {
             InitializeComponent();
         }

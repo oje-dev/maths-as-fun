@@ -1,6 +1,6 @@
 ﻿namespace MathsAsFun___Arithmetic_Practise_App
 {
-    partial class frmLoadingScreen
+    partial class FrmLoadingScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoadingScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoadingScreen));
             this.tmrLoadingScreen = new System.Windows.Forms.Timer(this.components);
             this.lblCopyrightMessage = new System.Windows.Forms.Label();
             this.prgLoading = new System.Windows.Forms.ProgressBar();

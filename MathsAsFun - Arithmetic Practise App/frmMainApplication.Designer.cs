@@ -1,6 +1,6 @@
 ﻿namespace MathsAsFun___Arithmetic_Practise_App
 {
-    partial class frmMainApplication
+    partial class FrmMainApplication
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainApplication));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainApplication));
             this.cboTimesTable = new System.Windows.Forms.ComboBox();
             this.btnTimesTable = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cboTimesTable
             // 
+            this.cboTimesTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTimesTable.FormattingEnabled = true;
             this.cboTimesTable.Items.AddRange(new object[] {
             "3 Times Table",

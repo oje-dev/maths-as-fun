@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MathsAsFun___Arithmetic_Practise_App
 {
-    public partial class frmMultiplicationTable : Form
+    public partial class FrmMultiplicationTable : Form
     {
-        public frmMultiplicationTable()
+        public FrmMultiplicationTable()
         {
             InitializeComponent();
         }

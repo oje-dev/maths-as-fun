@@ -1,6 +1,6 @@
 ﻿namespace MathsAsFun___Arithmetic_Practise_App
 {
-    partial class frmMultiplicationTable
+    partial class FrmMultiplicationTable
     {
         /// <summary>
         /// Required designer variable.

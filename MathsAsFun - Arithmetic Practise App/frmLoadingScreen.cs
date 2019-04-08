@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MathsAsFun___Arithmetic_Practise_App
 {
-    public partial class frmLoadingScreen : Form
+    public partial class FrmLoadingScreen : Form
     {
         int timeElapsed = 0;
 
-        public frmLoadingScreen()
+        public FrmLoadingScreen()
         {
             InitializeComponent();
         }
@@ -88,7 +88,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             tmrLoadingScreen.Enabled = false;
             tmrLoadingScreen.Dispose();
             Hide();
-            frmMainApplication frmMain = new frmMainApplication();
+            FrmMainApplication frmMain = new FrmMainApplication();
             frmMain.Show();
         }
     }
