@@ -88,8 +88,8 @@ namespace MathsAsFun___Arithmetic_Practise_App
             tmrLoadingScreen.Enabled = false;
             tmrLoadingScreen.Dispose();
             Hide();
-            FrmMainApplication frmMain = new FrmMainApplication();
-            frmMain.Show();
+            FrmMainApplication frmMainApplication = new FrmMainApplication();
+            frmMainApplication.Show();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
     public partial class FrmMultiplicationTable : Form
     {
         FrmMainApplication frmMainApplication = new FrmMainApplication();
+
         public FrmMultiplicationTable()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void FrmMultiplicationTable_Load(object sender, EventArgs e)
         {
-
+            cboTimesTable.SelectedIndex = cboTimesTable.Items.Count - 8;
         }
     }
 }

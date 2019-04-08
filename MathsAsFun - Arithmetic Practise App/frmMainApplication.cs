@@ -26,5 +26,11 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
             Application.Exit();
         }
+
+        private void BtnTimesTable_Click(object sender, EventArgs e)
+        {
+            FrmMultiplicationTable frmMultiplicationTable = new FrmMultiplicationTable();
+            frmMultiplicationTable.ShowDialog();
+        }
     }
 }

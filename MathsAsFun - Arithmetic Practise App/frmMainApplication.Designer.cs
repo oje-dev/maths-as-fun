@@ -40,6 +40,7 @@
             this.btnTimesTable.TabIndex = 1;
             this.btnTimesTable.Text = "Times Table";
             this.btnTimesTable.UseVisualStyleBackColor = true;
+            this.btnTimesTable.Click += new System.EventHandler(this.BtnTimesTable_Click);
             // 
             // FrmMainApplication
             // 
