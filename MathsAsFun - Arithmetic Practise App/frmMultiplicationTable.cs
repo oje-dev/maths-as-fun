@@ -30,21 +30,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void CreateTable()
         {
-            int selectedTimesTable = 2;
-            switch (cboTimesTable.Text)
-            {
-                case "3 Times Table": selectedTimesTable = 3; break;
-                case "4 Times Table": selectedTimesTable = 4; break;
-                case "5 Times Table": selectedTimesTable = 5; break;
-                case "6 Times Table": selectedTimesTable = 6; break;
-                case "7 Times Table": selectedTimesTable = 7; break;
-                case "8 Times Table": selectedTimesTable = 8; break;
-                case "9 Times Table": selectedTimesTable = 9; break;
-                case "10 Times Table": selectedTimesTable = 10; break;
-                case "11 Times Table": selectedTimesTable = 11; break;
-                case "12 Times Table": selectedTimesTable = 12; break;
-                default: break;
-            }
+            int selectedTimesTable = Convert.ToInt16(char.ToString(cboTimesTable.Text.ToCharArray()[0]) + char.ToString(cboTimesTable.Text.ToCharArray()[1]));
             grdTimesTable.ColumnCount = selectedTimesTable + 1;
             grdTimesTable.RowCount = grdTimesTable.ColumnCount;
             for (int i = 0; i < selectedTimesTable; i++)
