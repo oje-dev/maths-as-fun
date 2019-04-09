@@ -47,7 +47,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     prgLoading.Visible = false;
                     lblCopyrightMessage.Visible = false;
                     Cursor = default;
-                    ShowInTaskbar = true;
                     FormBorderStyle = FormBorderStyle.FixedSingle;
                     Width = 965;
                     Height = 395;

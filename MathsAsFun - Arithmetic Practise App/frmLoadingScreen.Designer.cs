@@ -125,7 +125,7 @@
             this.imgLogo.TabIndex = 7;
             this.imgLogo.TabStop = false;
             // 
-            // frmLoadingScreen
+            // FrmLoadingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,8 +142,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmLoadingScreen";
-            this.ShowInTaskbar = false;
+            this.Name = "FrmLoadingScreen";
             this.Text = "Arithmetic Practise App - Welcome Screen";
             this.Load += new System.EventHandler(this.FrmLoadingScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgPi)).EndInit();
