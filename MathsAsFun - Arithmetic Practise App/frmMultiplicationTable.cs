@@ -33,13 +33,11 @@ namespace MathsAsFun___Arithmetic_Practise_App
             int selectedTimesTable = Convert.ToInt16(char.ToString(cboTimesTable.Text.ToCharArray()[0]) + char.ToString(cboTimesTable.Text.ToCharArray()[1]));
             grdTimesTable.ColumnCount = selectedTimesTable + 1;
             grdTimesTable.RowCount = grdTimesTable.ColumnCount;
-
             int totalRowHeight = 0, totalColumnWidth = 0;
             foreach (DataGridViewRow rows in grdTimesTable.Rows)
             {
                 totalRowHeight += rows.Height;
             }
-
             foreach (DataGridViewColumn columns in grdTimesTable.Columns)
             {
                 totalColumnWidth += columns.Width;
@@ -48,7 +46,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
             grdTimesTable.Height = totalRowHeight + 10;
             grdTimesTable.Left = (ClientSize.Width - grdTimesTable.Width) / 2;
             grdTimesTable.Top = ((ClientSize.Height - grdTimesTable.Height) / 2) + 12;
-
             int[,] timesTableArray = functions.TimesTableArrayFunction(selectedTimesTable);
             for (int i = 0; i < selectedTimesTable; i++)
             {

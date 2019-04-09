@@ -51,7 +51,7 @@
             "10 Times Table",
             "11 Times Table",
             "12 Times Table"});
-            this.cboTimesTable.Location = new System.Drawing.Point(120, 12);
+            this.cboTimesTable.Location = new System.Drawing.Point(108, 12);
             this.cboTimesTable.MaxDropDownItems = 12;
             this.cboTimesTable.Name = "cboTimesTable";
             this.cboTimesTable.Size = new System.Drawing.Size(121, 21);
@@ -85,14 +85,14 @@
             this.grdTimesTable.RowHeadersVisible = false;
             this.grdTimesTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.grdTimesTable.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.grdTimesTable.Size = new System.Drawing.Size(334, 318);
+            this.grdTimesTable.Size = new System.Drawing.Size(323, 283);
             this.grdTimesTable.TabIndex = 1;
             // 
             // FrmMultiplicationTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 389);
+            this.ClientSize = new System.Drawing.Size(336, 345);
             this.Controls.Add(this.grdTimesTable);
             this.Controls.Add(this.cboTimesTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
