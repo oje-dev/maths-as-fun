@@ -44,6 +44,10 @@ namespace MathsAsFun___Arithmetic_Practise_App
             lblSecondNumber.Visible = true;
             lblEquals.Visible = true;
             txtAnswer.Visible = true;
+            lblScore.Visible = false;
+            totalQuestionsAnswered = 0;
+            totalQuestionsCorrect = 0;
+            lblScore.Font = new Font(lblScore.Font.FontFamily, 20);
             DisplaySum();
         }
 
@@ -234,11 +238,21 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
             if (e.KeyCode == Keys.Enter)
             {
-                CheckAnswer(GetAnswer());
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-                DisplaySum();
-                double percentageCorrect = GetPercentage();
+                if (totalQuestionsAnswered < 1000)
+                {
+                    CheckAnswer(GetAnswer());
+                    e.Handled = true;
+                    e.SuppressKeyPress = true;
+                    DisplaySum();
+                    lblScore.Visible = true;
+                    SetScore(GetPercentage());
+                }
+                else
+                {
+                    lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
+                    lblScore.ForeColor = Color.Red;
+                    lblScore.Text = "Maximum Number of Questions Reached\nPlease press the start button again.";
+                }
             }
         }
 
@@ -247,6 +261,26 @@ namespace MathsAsFun___Arithmetic_Practise_App
             double percentageCorrect = (Convert.ToDouble(totalQuestionsCorrect) / Convert.ToDouble(totalQuestionsAnswered)) * 100.0;
             percentageCorrect = Math.Round(percentageCorrect, 2);
             return percentageCorrect;
+        }
+
+        public void SetScore(double percentageCorrect)
+        {
+            lblScore.Text = Convert.ToString(totalQuestionsCorrect) + "/" + Convert.ToString(totalQuestionsAnswered) + " " + Convert.ToString(percentageCorrect) + "%";
+            if (percentageCorrect >= 80.0)
+            {
+                lblScore.Text += " Keep it up!";
+                lblScore.ForeColor = Color.Green;
+            }
+            else if (percentageCorrect >= 60)
+            {
+                lblScore.Text += " Keep Going!";
+                lblScore.ForeColor = Color.Yellow;
+            }
+            else
+            {
+                lblScore.Text += " Try Harder!";
+                lblScore.ForeColor = Color.Red;
+            }
         }
     }
 }

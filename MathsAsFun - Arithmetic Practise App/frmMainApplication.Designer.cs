@@ -60,6 +60,7 @@
             this.imgGreenTick = new System.Windows.Forms.PictureBox();
             this.pnlFirstNumber = new System.Windows.Forms.Panel();
             this.pnlSecondNumber = new System.Windows.Forms.Panel();
+            this.lblScore = new System.Windows.Forms.Label();
             this.grpPositiveOrNegative.SuspendLayout();
             this.grpOperation.SuspendLayout();
             this.grpMagnitude.SuspendLayout();
@@ -337,10 +338,10 @@
             // lblTimerText
             // 
             this.lblTimerText.AutoSize = true;
-            this.lblTimerText.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimerText.Location = new System.Drawing.Point(413, 220);
+            this.lblTimerText.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimerText.Location = new System.Drawing.Point(453, 223);
             this.lblTimerText.Name = "lblTimerText";
-            this.lblTimerText.Size = new System.Drawing.Size(240, 32);
+            this.lblTimerText.Size = new System.Drawing.Size(207, 28);
             this.lblTimerText.TabIndex = 22;
             this.lblTimerText.Text = "Time Remaining:";
             this.lblTimerText.Visible = false;
@@ -348,10 +349,10 @@
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(659, 220);
+            this.lblTimer.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(666, 224);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(45, 32);
+            this.lblTimer.Size = new System.Drawing.Size(38, 28);
             this.lblTimer.TabIndex = 23;
             this.lblTimer.Text = "10";
             this.lblTimer.Visible = false;
@@ -382,11 +383,23 @@
             this.pnlSecondNumber.Size = new System.Drawing.Size(84, 32);
             this.pnlSecondNumber.TabIndex = 26;
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(12, 220);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(90, 32);
+            this.lblScore.TabIndex = 27;
+            this.lblScore.Text = "Score";
+            this.lblScore.Visible = false;
+            // 
             // FrmMainApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 261);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pnlSecondNumber);
             this.Controls.Add(this.pnlFirstNumber);
             this.Controls.Add(this.imgGreenTick);
@@ -459,5 +472,6 @@
         private System.Windows.Forms.PictureBox imgGreenTick;
         private System.Windows.Forms.Panel pnlFirstNumber;
         private System.Windows.Forms.Panel pnlSecondNumber;
+        private System.Windows.Forms.Label lblScore;
     }
 }
