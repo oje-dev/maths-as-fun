@@ -90,7 +90,7 @@
             this.lblNeedHelp.Location = new System.Drawing.Point(457, 21);
             this.lblNeedHelp.Name = "lblNeedHelp";
             this.lblNeedHelp.Size = new System.Drawing.Size(247, 13);
-            this.lblNeedHelp.TabIndex = 2;
+            this.lblNeedHelp.TabIndex = 0;
             this.lblNeedHelp.Text = "Need help? Click here to show a multiplication grid!";
             // 
             // rdbPositive
@@ -100,7 +100,7 @@
             this.rdbPositive.Location = new System.Drawing.Point(6, 19);
             this.rdbPositive.Name = "rdbPositive";
             this.rdbPositive.Size = new System.Drawing.Size(86, 17);
-            this.rdbPositive.TabIndex = 4;
+            this.rdbPositive.TabIndex = 0;
             this.rdbPositive.TabStop = true;
             this.rdbPositive.Text = "Only Positive";
             this.rdbPositive.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             this.rdbNegative.Location = new System.Drawing.Point(5, 42);
             this.rdbNegative.Name = "rdbNegative";
             this.rdbNegative.Size = new System.Drawing.Size(106, 17);
-            this.rdbNegative.TabIndex = 5;
+            this.rdbNegative.TabIndex = 1;
             this.rdbNegative.Text = "Include Negative";
             this.rdbNegative.UseVisualStyleBackColor = true;
             // 
@@ -122,7 +122,7 @@
             this.rdbAddition.Location = new System.Drawing.Point(6, 19);
             this.rdbAddition.Name = "rdbAddition";
             this.rdbAddition.Size = new System.Drawing.Size(63, 17);
-            this.rdbAddition.TabIndex = 6;
+            this.rdbAddition.TabIndex = 0;
             this.rdbAddition.TabStop = true;
             this.rdbAddition.Text = "Addition";
             this.rdbAddition.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             this.rdbSubtraction.Location = new System.Drawing.Point(6, 42);
             this.rdbSubtraction.Name = "rdbSubtraction";
             this.rdbSubtraction.Size = new System.Drawing.Size(79, 17);
-            this.rdbSubtraction.TabIndex = 7;
+            this.rdbSubtraction.TabIndex = 1;
             this.rdbSubtraction.Text = "Subtraction";
             this.rdbSubtraction.UseVisualStyleBackColor = true;
             // 
@@ -143,7 +143,7 @@
             this.rdbMultiplication.Location = new System.Drawing.Point(6, 65);
             this.rdbMultiplication.Name = "rdbMultiplication";
             this.rdbMultiplication.Size = new System.Drawing.Size(86, 17);
-            this.rdbMultiplication.TabIndex = 8;
+            this.rdbMultiplication.TabIndex = 2;
             this.rdbMultiplication.Text = "Multiplication";
             this.rdbMultiplication.UseVisualStyleBackColor = true;
             // 
@@ -153,7 +153,7 @@
             this.rdbDivision.Location = new System.Drawing.Point(6, 88);
             this.rdbDivision.Name = "rdbDivision";
             this.rdbDivision.Size = new System.Drawing.Size(62, 17);
-            this.rdbDivision.TabIndex = 9;
+            this.rdbDivision.TabIndex = 3;
             this.rdbDivision.Text = "Division";
             this.rdbDivision.UseVisualStyleBackColor = true;
             // 
@@ -164,7 +164,7 @@
             this.grpPositiveOrNegative.Location = new System.Drawing.Point(504, 85);
             this.grpPositiveOrNegative.Name = "grpPositiveOrNegative";
             this.grpPositiveOrNegative.Size = new System.Drawing.Size(200, 70);
-            this.grpPositiveOrNegative.TabIndex = 10;
+            this.grpPositiveOrNegative.TabIndex = 4;
             this.grpPositiveOrNegative.TabStop = false;
             this.grpPositiveOrNegative.Text = "Include Negative Numbers?";
             // 
@@ -177,7 +177,7 @@
             this.grpOperation.Location = new System.Drawing.Point(12, 85);
             this.grpOperation.Name = "grpOperation";
             this.grpOperation.Size = new System.Drawing.Size(200, 123);
-            this.grpOperation.TabIndex = 11;
+            this.grpOperation.TabIndex = 2;
             this.grpOperation.TabStop = false;
             this.grpOperation.Text = "Select Operation";
             // 
@@ -189,7 +189,7 @@
             this.grpMagnitude.Location = new System.Drawing.Point(256, 85);
             this.grpMagnitude.Name = "grpMagnitude";
             this.grpMagnitude.Size = new System.Drawing.Size(204, 123);
-            this.grpMagnitude.TabIndex = 12;
+            this.grpMagnitude.TabIndex = 3;
             this.grpMagnitude.TabStop = false;
             this.grpMagnitude.Text = "Select Magnitude";
             // 
@@ -232,7 +232,7 @@
             this.grpMode.Location = new System.Drawing.Point(504, 161);
             this.grpMode.Name = "grpMode";
             this.grpMode.Size = new System.Drawing.Size(200, 47);
-            this.grpMode.TabIndex = 13;
+            this.grpMode.TabIndex = 5;
             this.grpMode.TabStop = false;
             this.grpMode.Text = "Select Mode";
             // 
@@ -264,7 +264,7 @@
             this.btnStart.Location = new System.Drawing.Point(12, 224);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(102, 32);
-            this.btnStart.TabIndex = 14;
+            this.btnStart.TabIndex = 6;
             this.btnStart.Text = "Practise!";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
@@ -275,7 +275,7 @@
             this.txtAnswer.Location = new System.Drawing.Point(370, 221);
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(171, 39);
-            this.txtAnswer.TabIndex = 16;
+            this.txtAnswer.TabIndex = 11;
             this.txtAnswer.Visible = false;
             this.txtAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAnswer_KeyDown);
             // 
@@ -287,7 +287,7 @@
             this.lblIncorrect.Location = new System.Drawing.Point(547, 224);
             this.lblIncorrect.Name = "lblIncorrect";
             this.lblIncorrect.Size = new System.Drawing.Size(165, 32);
-            this.lblIncorrect.TabIndex = 17;
+            this.lblIncorrect.TabIndex = 13;
             this.lblIncorrect.Text = "-99980001!";
             this.lblIncorrect.Visible = false;
             // 
@@ -299,7 +299,7 @@
             this.lblFirstNumber.Location = new System.Drawing.Point(3, 0);
             this.lblFirstNumber.Name = "lblFirstNumber";
             this.lblFirstNumber.Size = new System.Drawing.Size(75, 32);
-            this.lblFirstNumber.TabIndex = 18;
+            this.lblFirstNumber.TabIndex = 0;
             this.lblFirstNumber.Text = "9999";
             this.lblFirstNumber.Visible = false;
             // 
@@ -311,7 +311,7 @@
             this.lblSecondNumber.Location = new System.Drawing.Point(5, 0);
             this.lblSecondNumber.Name = "lblSecondNumber";
             this.lblSecondNumber.Size = new System.Drawing.Size(75, 32);
-            this.lblSecondNumber.TabIndex = 19;
+            this.lblSecondNumber.TabIndex = 0;
             this.lblSecondNumber.Text = "9999";
             this.lblSecondNumber.Visible = false;
             // 
@@ -323,7 +323,7 @@
             this.lblOperator.Location = new System.Drawing.Point(206, 224);
             this.lblOperator.Name = "lblOperator";
             this.lblOperator.Size = new System.Drawing.Size(32, 36);
-            this.lblOperator.TabIndex = 20;
+            this.lblOperator.TabIndex = 8;
             this.lblOperator.Text = "x";
             this.lblOperator.Visible = false;
             // 
@@ -335,7 +335,7 @@
             this.lblEquals.Location = new System.Drawing.Point(334, 224);
             this.lblEquals.Name = "lblEquals";
             this.lblEquals.Size = new System.Drawing.Size(30, 32);
-            this.lblEquals.TabIndex = 21;
+            this.lblEquals.TabIndex = 10;
             this.lblEquals.Text = "=";
             this.lblEquals.Visible = false;
             // 
@@ -351,7 +351,7 @@
             this.lblTimerText.Location = new System.Drawing.Point(570, 276);
             this.lblTimerText.Name = "lblTimerText";
             this.lblTimerText.Size = new System.Drawing.Size(77, 28);
-            this.lblTimerText.TabIndex = 22;
+            this.lblTimerText.TabIndex = 15;
             this.lblTimerText.Text = "Time:";
             this.lblTimerText.Visible = false;
             // 
@@ -362,7 +362,7 @@
             this.lblTimer.Location = new System.Drawing.Point(0, 0);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(51, 28);
-            this.lblTimer.TabIndex = 23;
+            this.lblTimer.TabIndex = 0;
             this.lblTimer.Text = "210";
             this.lblTimer.Visible = false;
             // 
@@ -382,7 +382,7 @@
             this.pnlFirstNumber.Location = new System.Drawing.Point(120, 224);
             this.pnlFirstNumber.Name = "pnlFirstNumber";
             this.pnlFirstNumber.Size = new System.Drawing.Size(80, 32);
-            this.pnlFirstNumber.TabIndex = 25;
+            this.pnlFirstNumber.TabIndex = 7;
             // 
             // pnlSecondNumber
             // 
@@ -390,7 +390,7 @@
             this.pnlSecondNumber.Location = new System.Drawing.Point(244, 224);
             this.pnlSecondNumber.Name = "pnlSecondNumber";
             this.pnlSecondNumber.Size = new System.Drawing.Size(84, 32);
-            this.pnlSecondNumber.TabIndex = 26;
+            this.pnlSecondNumber.TabIndex = 9;
             // 
             // lblScore
             // 
@@ -399,7 +399,7 @@
             this.lblScore.Location = new System.Drawing.Point(12, 273);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(90, 32);
-            this.lblScore.TabIndex = 27;
+            this.lblScore.TabIndex = 14;
             this.lblScore.Text = "Score";
             this.lblScore.Visible = false;
             // 
