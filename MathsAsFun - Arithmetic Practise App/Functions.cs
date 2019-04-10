@@ -36,6 +36,11 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
             Random random = new Random();
             int[] twoNumbers = new int[2];
+            int randomPositiveOrNegative = random.Next(2);
+            if (randomPositiveOrNegative == 0)
+            {
+                postiveOrNegative = PostiveOrNegative.Positive;
+            }
             if (postiveOrNegative == PostiveOrNegative.Positive)
             {
                 if (magnitude == Magnitude.Ten)
@@ -51,10 +56,13 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         do
                         {
-                            for (int i = 0; i < twoNumbers.Length; i++)
+                            do
                             {
-                                twoNumbers[i] = random.Next(11);
-                            }
+                                for (int i = 0; i < twoNumbers.Length; i++)
+                                {
+                                    twoNumbers[i] = random.Next(11);
+                                }
+                            } while (twoNumbers[twoNumbers.Length - 2] == 0 || twoNumbers[twoNumbers.Length - 1] == 0);
                         } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
                     }
                 }
@@ -68,15 +76,16 @@ namespace MathsAsFun___Arithmetic_Practise_App
                         }
                     }
                     else
-                    {
                         do
                         {
-                            for (int i = 0; i < twoNumbers.Length; i++)
+                            do
                             {
-                                twoNumbers[i] = random.Next(101);
-                            }
+                                for (int i = 0; i < twoNumbers.Length; i++)
+                                {
+                                    twoNumbers[i] = random.Next(101);
+                                }
+                            } while (twoNumbers[twoNumbers.Length - 2] == 0 || twoNumbers[twoNumbers.Length - 1] == 0);
                         } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
-                    }
                 }
                 else
                 {
@@ -88,15 +97,16 @@ namespace MathsAsFun___Arithmetic_Practise_App
                         }
                     }
                     else
-                    {
                         do
                         {
-                            for (int i = 0; i < twoNumbers.Length; i++)
+                            do
                             {
-                                twoNumbers[i] = random.Next(1001);
-                            }
+                                for (int i = 0; i < twoNumbers.Length; i++)
+                                {
+                                    twoNumbers[i] = random.Next(1001);
+                                }
+                            } while (twoNumbers[twoNumbers.Length - 2] == 0 || twoNumbers[twoNumbers.Length - 1] == 0);
                         } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
-                    }
                 }
             }
             else
@@ -111,15 +121,16 @@ namespace MathsAsFun___Arithmetic_Practise_App
                         }
                     }
                     else
-                    {
                         do
                         {
-                            for (int i = 0; i < twoNumbers.Length; i++)
+                            do
                             {
-                                twoNumbers[i] = random.Next(-10, 11);
-                            }
+                                for (int i = 0; i < twoNumbers.Length; i++)
+                                {
+                                    twoNumbers[i] = random.Next(-10, 11);
+                                }
+                            } while (twoNumbers[twoNumbers.Length - 2] == 0 || twoNumbers[twoNumbers.Length - 1] == 0);
                         } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
-                    }
                 }
                 else if (magnitude == Magnitude.Hundred)
                 {
@@ -131,15 +142,16 @@ namespace MathsAsFun___Arithmetic_Practise_App
                         }
                     }
                     else
-                    {
                         do
                         {
-                            for (int i = 0; i < twoNumbers.Length; i++)
+                            do
                             {
-                                twoNumbers[i] = random.Next(-100, 101);
-                            }
+                                for (int i = 0; i < twoNumbers.Length; i++)
+                                {
+                                    twoNumbers[i] = random.Next(-100, 101);
+                                }
+                            } while (twoNumbers[twoNumbers.Length - 2] == 0 || twoNumbers[twoNumbers.Length - 1] == 0);
                         } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
-                    }
                 }
                 else
                 {
@@ -151,15 +163,16 @@ namespace MathsAsFun___Arithmetic_Practise_App
                         }
                     }
                     else
-                    {
                         do
                         {
-                            for (int i = 0; i < twoNumbers.Length; i++)
+                            do
                             {
-                                twoNumbers[i] = random.Next(-1000, 1001);
-                            }
+                                for (int i = 0; i < twoNumbers.Length; i++)
+                                {
+                                    twoNumbers[i] = random.Next(-1000, 1001);
+                                }
+                            } while (twoNumbers[twoNumbers.Length - 2] == 0 || twoNumbers[twoNumbers.Length - 1] == 0);
                         } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
-                    }
                 }
             }
             return twoNumbers;

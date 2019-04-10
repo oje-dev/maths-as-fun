@@ -12,6 +12,8 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     public partial class FrmMainApplication : Form
     {
+        readonly Functions functions = new Functions();
+
         public FrmMainApplication()
         {
             InitializeComponent();
