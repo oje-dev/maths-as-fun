@@ -56,7 +56,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         grdTimesTable.Rows[i].Cells[j + 1].Value = timesTableArray[i, j];
                     }
-                    else if (j == 0)
+                    if (j == 0)
                     {
                         grdTimesTable.Rows[i + 1].Cells[j].Value = timesTableArray[i, j];
                     }
