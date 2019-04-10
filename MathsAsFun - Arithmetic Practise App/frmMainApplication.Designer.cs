@@ -61,6 +61,7 @@
             this.pnlFirstNumber = new System.Windows.Forms.Panel();
             this.pnlSecondNumber = new System.Windows.Forms.Panel();
             this.lblScore = new System.Windows.Forms.Label();
+            this.pnlTimer = new System.Windows.Forms.Panel();
             this.grpPositiveOrNegative.SuspendLayout();
             this.grpOperation.SuspendLayout();
             this.grpMagnitude.SuspendLayout();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgGreenTick)).BeginInit();
             this.pnlFirstNumber.SuspendLayout();
             this.pnlSecondNumber.SuspendLayout();
+            this.pnlTimer.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShowTimesTable
@@ -344,22 +346,22 @@
             // 
             this.lblTimerText.AutoSize = true;
             this.lblTimerText.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimerText.Location = new System.Drawing.Point(453, 223);
+            this.lblTimerText.Location = new System.Drawing.Point(570, 224);
             this.lblTimerText.Name = "lblTimerText";
-            this.lblTimerText.Size = new System.Drawing.Size(207, 28);
+            this.lblTimerText.Size = new System.Drawing.Size(77, 28);
             this.lblTimerText.TabIndex = 22;
-            this.lblTimerText.Text = "Time Remaining:";
+            this.lblTimerText.Text = "Time:";
             this.lblTimerText.Visible = false;
             // 
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(666, 224);
+            this.lblTimer.Location = new System.Drawing.Point(0, 0);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(38, 28);
+            this.lblTimer.Size = new System.Drawing.Size(51, 28);
             this.lblTimer.TabIndex = 23;
-            this.lblTimer.Text = "10";
+            this.lblTimer.Text = "210";
             this.lblTimer.Visible = false;
             // 
             // imgGreenTick
@@ -399,16 +401,24 @@
             this.lblScore.Text = "Score";
             this.lblScore.Visible = false;
             // 
+            // pnlTimer
+            // 
+            this.pnlTimer.Controls.Add(this.lblTimer);
+            this.pnlTimer.Location = new System.Drawing.Point(653, 224);
+            this.pnlTimer.Name = "pnlTimer";
+            this.pnlTimer.Size = new System.Drawing.Size(51, 28);
+            this.pnlTimer.TabIndex = 28;
+            // 
             // FrmMainApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 261);
+            this.Controls.Add(this.pnlTimer);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pnlSecondNumber);
             this.Controls.Add(this.pnlFirstNumber);
             this.Controls.Add(this.imgGreenTick);
-            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblTimerText);
             this.Controls.Add(this.lblEquals);
             this.Controls.Add(this.lblOperator);
@@ -443,6 +453,8 @@
             this.pnlFirstNumber.PerformLayout();
             this.pnlSecondNumber.ResumeLayout(false);
             this.pnlSecondNumber.PerformLayout();
+            this.pnlTimer.ResumeLayout(false);
+            this.pnlTimer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,5 +492,6 @@
         private System.Windows.Forms.Panel pnlFirstNumber;
         private System.Windows.Forms.Panel pnlSecondNumber;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Panel pnlTimer;
     }
 }

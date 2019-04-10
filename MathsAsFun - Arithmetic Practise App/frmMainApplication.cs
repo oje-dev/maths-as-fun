@@ -50,12 +50,23 @@ namespace MathsAsFun___Arithmetic_Practise_App
             totalQuestionsCorrect = 0;
             lblScore.Font = new Font(lblScore.Font.FontFamily, 20);
             txtAnswer.Text = null;
+            lblIncorrect.Visible = false;
+            imgGreenTick.Visible = false;
             if (rdbTimedMode.Checked == true)
             {
-                GetTimeAllowed();
-                tmrTimedMode.Enabled = true;
-                lblTimer.Visible = true;
+                RestartTimer();
                 lblTimerText.Visible = true;
+                lblTimer.Visible = true;
+                timeRemaining = GetTimeAllowed();
+                lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+                lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
+                tmrTimedMode.Enabled = true;
+            }
+            else
+            {
+                tmrTimedMode.Enabled = false;
+                lblTimer.Visible = false;
+                lblTimerText.Visible = false;
             }
             DisplaySum();
         }
@@ -249,13 +260,17 @@ namespace MathsAsFun___Arithmetic_Practise_App
             {
                 if (totalQuestionsAnswered < 1000)
                 {
-                    NewMethod();
+                    AcceptAnswer();
                     e.Handled = true;
                     e.SuppressKeyPress = true;
                 }
                 else
                 {
-                    NewMethod();
+                    tmrTimedMode.Enabled = false;
+                    lblTimerText.Visible = false;
+                    lblTimer.Visible = false;
+                    lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
+                    lblScore.Text = "The maximum number of questions have been answered.\nPlease press the practise button to start a new session.";
                 }
             }
         }
@@ -287,104 +302,81 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        public void GetTimeAllowed()
+        public int GetTimeAllowed()
         {
+            int getTimeRemaining;
             if (rdbAddition.Checked == true)
             {
                 if (rdbTen.Checked == true)
                 {
-                    timeRemaining = 4;
+                    getTimeRemaining = 4;
                 }
                 else if (rdbHundred.Checked == true)
                 {
-                    timeRemaining = 12;
+                    getTimeRemaining = 12;
                 }
                 else
                 {
-                    timeRemaining = 30;
+                    getTimeRemaining = 30;
                 }
             }
             else if (rdbSubtraction.Checked == true)
             {
                 if (rdbTen.Checked == true)
                 {
-                    timeRemaining = 4;
+                    getTimeRemaining = 4;
                 }
                 else if (rdbHundred.Checked == true)
                 {
-                    timeRemaining = 12;
+                    getTimeRemaining = 12;
                 }
                 else
                 {
-                    timeRemaining = 30;
+                    getTimeRemaining = 30;
                 }
             }
             else if (rdbMultiplication.Checked == true)
             {
                 if (rdbTen.Checked == true)
                 {
-                    timeRemaining = 8;
+                    getTimeRemaining = 8;
                 }
                 else if (rdbHundred.Checked == true)
                 {
-                    timeRemaining = 90;
+                    getTimeRemaining = 90;
                 }
                 else
                 {
-                    timeRemaining = 210;
+                    getTimeRemaining = 210;
                 }
             }
             else
             {
                 if (rdbTen.Checked == true)
                 {
-                    timeRemaining = 4;
+                    getTimeRemaining = 4;
                 }
                 else if (rdbHundred.Checked == true)
                 {
-                    timeRemaining = 12;
+                    getTimeRemaining = 12;
                 }
                 else
                 {
-                    timeRemaining = 45;
+                    getTimeRemaining = 45;
                 }
             }
-            timeRemaining *= 1000;
+            return getTimeRemaining *= 1000;
         }
 
         private void TmrTimedMode_Tick(object sender, EventArgs e)
         {
             timeRemaining -= 1000;
+            lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+            lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
             if (timeRemaining == 0)
             {
-                tmrTimedMode.Enabled = false;
-                NewMethod();
-            }
-            lblTimer.Text = Convert.ToString(timeRemaining / 1000);
-        }
-
-        private void NewMethod()
-        {
-            if (totalQuestionsAnswered < 1000)
-            {
-                if (rdbTimedMode.Checked == true)
-                {
-                    lblTimer.Text = Convert.ToString(timeRemaining / 1000);
-                    tmrTimedMode.Enabled = false;
-                    GetTimeAllowed();
-                    tmrTimedMode.Enabled = true;
-                }
-                CheckAnswer(GetAnswer());
-                DisplaySum();
-                lblScore.Visible = true;
-                SetScore(GetPercentage());
-            }
-            else
-            {
-                lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
-                lblScore.ForeColor = Color.Red;
-                lblScore.Text = "Maximum Number of Questions Reached\nPlease press the start button again.";
-                tmrTimedMode.Enabled = false;
+                RestartTimer();
+                AcceptAnswer();
             }
         }
 
@@ -396,6 +388,40 @@ namespace MathsAsFun___Arithmetic_Practise_App
         private void FrmMainApplication_Deactivate(object sender, EventArgs e)
         {
             tmrTimedMode.Enabled = false;
+        }
+
+        private void RestartTimer()
+        {
+            tmrTimedMode.Enabled = false;
+            timeRemaining = GetTimeAllowed();
+            tmrTimedMode.Enabled = true;
+        }
+
+        private void AcceptAnswer()
+        {
+            if (lblScore.Visible == false)
+            {
+                lblScore.Visible = true;
+            }
+            if (rdbTimedMode.Checked == true)
+            {
+                RestartTimer();
+                lblTimerText.Visible = true;
+                lblTimer.Visible = true;
+                timeRemaining = GetTimeAllowed();
+                lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+                lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
+                tmrTimedMode.Enabled = true;
+            }
+            else
+            {
+                tmrTimedMode.Enabled = false;
+                lblTimer.Visible = false;
+                lblTimerText.Visible = false;
+            }
+            CheckAnswer(GetAnswer());
+            SetScore(GetPercentage());
+            DisplaySum();
         }
     }
 }
