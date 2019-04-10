@@ -107,13 +107,13 @@
             // 
             // btnContinue
             // 
+            this.btnContinue.Enabled = false;
             this.btnContinue.Location = new System.Drawing.Point(865, 322);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(75, 23);
             this.btnContinue.TabIndex = 6;
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = true;
-            this.btnContinue.Visible = false;
             this.btnContinue.Click += new System.EventHandler(this.BtnContinue_Click);
             // 
             // imgLogo

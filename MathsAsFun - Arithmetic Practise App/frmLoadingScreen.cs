@@ -75,7 +75,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 case 11500:
                     imgSigma.Enabled = false;
                     imgSigma.Visible = false;
-                    btnContinue.Visible = true;
+                    btnContinue.Enabled = true;
                     timeElapsed = 1000;
                     break;
             }
