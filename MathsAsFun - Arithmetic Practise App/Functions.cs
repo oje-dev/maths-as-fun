@@ -8,6 +8,10 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     class Functions
     {
+        enum Operation { };
+
+        enum Magnitude { };
+
         public int[,] TimesTableArrayFunction(int timesTable)
         {
             int[,] timesTableArray = new int[timesTable, timesTable];
@@ -25,5 +29,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
             return timesTableArray;
         }
+
+
     }
 }

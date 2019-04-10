@@ -47,6 +47,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             grdTimesTable.Left = (ClientSize.Width - grdTimesTable.Width) / 2;
             grdTimesTable.Top = ((ClientSize.Height - grdTimesTable.Height) / 2) + 12;
             int[,] timesTableArray = functions.TimesTableArrayFunction(selectedTimesTable);
+
             for (int i = 0; i < selectedTimesTable; i++)
             {
                 for (int j = 0; j < selectedTimesTable; j++)
@@ -70,7 +71,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     grdTimesTable.Rows[i + 1].Cells[j + 1].Value = timesTableArray[i, j];
                 }
             }
-
         }
 
         private void CboTimesTable_SelectedIndexChanged(object sender, EventArgs e)
