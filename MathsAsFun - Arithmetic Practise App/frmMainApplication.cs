@@ -53,6 +53,9 @@ namespace MathsAsFun___Arithmetic_Practise_App
             if (rdbTimedMode.Checked == true)
             {
                 GetTimeAllowed();
+                tmrTimedMode.Enabled = true;
+                lblTimer.Visible = true;
+                lblTimerText.Visible = true;
             }
             DisplaySum();
         }
@@ -246,19 +249,13 @@ namespace MathsAsFun___Arithmetic_Practise_App
             {
                 if (totalQuestionsAnswered < 1000)
                 {
-                    CheckAnswer(GetAnswer());
+                    NewMethod();
                     e.Handled = true;
                     e.SuppressKeyPress = true;
-                    DisplaySum();
-                    lblScore.Visible = true;
-                    SetScore(GetPercentage());
                 }
                 else
                 {
-                    lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
-                    lblScore.ForeColor = Color.Red;
-                    lblScore.Text = "Maximum Number of Questions Reached\nPlease press the start button again.";
-                    tmrTimedMode.Enabled = false;
+                    NewMethod();
                 }
             }
         }
@@ -352,12 +349,53 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     timeRemaining = 45;
                 }
             }
-            timeRemaining += 1000;
+            timeRemaining *= 1000;
         }
 
         private void TmrTimedMode_Tick(object sender, EventArgs e)
         {
+            timeRemaining -= 1000;
+            if (timeRemaining == 0)
+            {
+                tmrTimedMode.Enabled = false;
+                NewMethod();
+            }
+            lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+        }
 
+        private void NewMethod()
+        {
+            if (totalQuestionsAnswered < 1000)
+            {
+                if (rdbTimedMode.Checked == true)
+                {
+                    lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+                    tmrTimedMode.Enabled = false;
+                    GetTimeAllowed();
+                    tmrTimedMode.Enabled = true;
+                }
+                CheckAnswer(GetAnswer());
+                DisplaySum();
+                lblScore.Visible = true;
+                SetScore(GetPercentage());
+            }
+            else
+            {
+                lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
+                lblScore.ForeColor = Color.Red;
+                lblScore.Text = "Maximum Number of Questions Reached\nPlease press the start button again.";
+                tmrTimedMode.Enabled = false;
+            }
+        }
+
+        private void FrmMainApplication_Activated(object sender, EventArgs e)
+        {
+            tmrTimedMode.Enabled = true;
+        }
+
+        private void FrmMainApplication_Deactivate(object sender, EventArgs e)
+        {
+            tmrTimedMode.Enabled = false;
         }
     }
 }

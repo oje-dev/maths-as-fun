@@ -426,6 +426,8 @@
             this.MaximizeBox = false;
             this.Name = "FrmMainApplication";
             this.Text = "MathsAsFun - Arithmetic Practise App";
+            this.Activated += new System.EventHandler(this.FrmMainApplication_Activated);
+            this.Deactivate += new System.EventHandler(this.FrmMainApplication_Deactivate);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMainApplication_FormClosed);
             this.Load += new System.EventHandler(this.FrmMainApplication_Load);
             this.grpPositiveOrNegative.ResumeLayout(false);
