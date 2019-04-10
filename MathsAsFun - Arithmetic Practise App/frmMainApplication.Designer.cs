@@ -71,7 +71,7 @@
             // 
             // btnShowTimesTable
             // 
-            this.btnShowTimesTable.Location = new System.Drawing.Point(621, 12);
+            this.btnShowTimesTable.Location = new System.Drawing.Point(621, 4);
             this.btnShowTimesTable.Name = "btnShowTimesTable";
             this.btnShowTimesTable.Size = new System.Drawing.Size(83, 23);
             this.btnShowTimesTable.TabIndex = 1;
@@ -82,7 +82,7 @@
             // lblNeedHelp
             // 
             this.lblNeedHelp.AutoSize = true;
-            this.lblNeedHelp.Location = new System.Drawing.Point(368, 17);
+            this.lblNeedHelp.Location = new System.Drawing.Point(368, 9);
             this.lblNeedHelp.Name = "lblNeedHelp";
             this.lblNeedHelp.Size = new System.Drawing.Size(247, 13);
             this.lblNeedHelp.TabIndex = 2;
@@ -405,6 +405,7 @@
             this.Controls.Add(this.btnShowTimesTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmMainApplication";
             this.Text = "MathsAsFun - Arithmetic Practise App";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMainApplication_FormClosed);
