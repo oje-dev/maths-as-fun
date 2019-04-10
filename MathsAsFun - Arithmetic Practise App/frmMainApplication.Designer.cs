@@ -335,6 +335,11 @@
             this.lblEquals.Text = "=";
             this.lblEquals.Visible = false;
             // 
+            // tmrTimedMode
+            // 
+            this.tmrTimedMode.Interval = 1000;
+            this.tmrTimedMode.Tick += new System.EventHandler(this.TmrTimedMode_Tick);
+            // 
             // lblTimerText
             // 
             this.lblTimerText.AutoSize = true;

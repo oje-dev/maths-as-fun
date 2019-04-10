@@ -15,6 +15,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
         readonly Functions functions = new Functions();
         int totalQuestionsAnswered = 0;
         int totalQuestionsCorrect = 0;
+        int timeRemaining;
 
         public FrmMainApplication()
         {
@@ -49,6 +50,10 @@ namespace MathsAsFun___Arithmetic_Practise_App
             totalQuestionsCorrect = 0;
             lblScore.Font = new Font(lblScore.Font.FontFamily, 20);
             txtAnswer.Text = null;
+            if (rdbTimedMode.Checked == true)
+            {
+                GetTimeRemaining();
+            }
             DisplaySum();
         }
 
@@ -253,6 +258,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
                     lblScore.ForeColor = Color.Red;
                     lblScore.Text = "Maximum Number of Questions Reached\nPlease press the start button again.";
+                    tmrTimedMode.Enabled = false;
                 }
             }
         }
@@ -282,6 +288,76 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 lblScore.Text += " Try Harder!";
                 lblScore.ForeColor = Color.Red;
             }
+        }
+
+        public void GetTimeRemaining()
+        {
+            if (rdbAddition.Checked == true)
+            {
+                if (rdbTen.Checked == true)
+                {
+                    timeRemaining = 4;
+                }
+                else if (rdbHundred.Checked == true)
+                {
+                    timeRemaining = 12;
+                }
+                else
+                {
+                    timeRemaining = 30;
+                }
+            }
+            else if (rdbSubtraction.Checked == true)
+            {
+                if (rdbTen.Checked == true)
+                {
+                    timeRemaining = 4;
+                }
+                else if (rdbHundred.Checked == true)
+                {
+                    timeRemaining = 12;
+                }
+                else
+                {
+                    timeRemaining = 30;
+                }
+            }
+            else if (rdbMultiplication.Checked == true)
+            {
+                if (rdbTen.Checked == true)
+                {
+                    timeRemaining = 8;
+                }
+                else if (rdbHundred.Checked == true)
+                {
+                    timeRemaining = 90;
+                }
+                else
+                {
+                    timeRemaining = 210;
+                }
+            }
+            else
+            {
+                if (rdbTen.Checked == true)
+                {
+                    timeRemaining = 4;
+                }
+                else if (rdbHundred.Checked == true)
+                {
+                    timeRemaining = 12;
+                }
+                else
+                {
+                    timeRemaining = 45;
+                }
+            }
+            timeRemaining += 1000;
+        }
+
+        private void TmrTimedMode_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
