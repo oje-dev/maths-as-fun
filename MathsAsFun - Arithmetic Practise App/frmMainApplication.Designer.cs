@@ -74,6 +74,7 @@
             // rdbPositive
             // 
             this.rdbPositive.AutoSize = true;
+            this.rdbPositive.Checked = true;
             this.rdbPositive.Location = new System.Drawing.Point(6, 19);
             this.rdbPositive.Name = "rdbPositive";
             this.rdbPositive.Size = new System.Drawing.Size(62, 17);
@@ -89,13 +90,13 @@
             this.rdbNegative.Name = "rdbNegative";
             this.rdbNegative.Size = new System.Drawing.Size(68, 17);
             this.rdbNegative.TabIndex = 5;
-            this.rdbNegative.TabStop = true;
             this.rdbNegative.Text = "Negative";
             this.rdbNegative.UseVisualStyleBackColor = true;
             // 
             // rdbAddition
             // 
             this.rdbAddition.AutoSize = true;
+            this.rdbAddition.Checked = true;
             this.rdbAddition.Location = new System.Drawing.Point(6, 19);
             this.rdbAddition.Name = "rdbAddition";
             this.rdbAddition.Size = new System.Drawing.Size(63, 17);
@@ -111,7 +112,6 @@
             this.rdbSubtraction.Name = "rdbSubtraction";
             this.rdbSubtraction.Size = new System.Drawing.Size(79, 17);
             this.rdbSubtraction.TabIndex = 7;
-            this.rdbSubtraction.TabStop = true;
             this.rdbSubtraction.Text = "Subtraction";
             this.rdbSubtraction.UseVisualStyleBackColor = true;
             // 
@@ -122,7 +122,6 @@
             this.rdbMultiplication.Name = "rdbMultiplication";
             this.rdbMultiplication.Size = new System.Drawing.Size(86, 17);
             this.rdbMultiplication.TabIndex = 8;
-            this.rdbMultiplication.TabStop = true;
             this.rdbMultiplication.Text = "Multiplication";
             this.rdbMultiplication.UseVisualStyleBackColor = true;
             // 
@@ -133,7 +132,6 @@
             this.rdbDivision.Name = "rdbDivision";
             this.rdbDivision.Size = new System.Drawing.Size(62, 17);
             this.rdbDivision.TabIndex = 9;
-            this.rdbDivision.TabStop = true;
             this.rdbDivision.Text = "Division";
             this.rdbDivision.UseVisualStyleBackColor = true;
             // 
@@ -176,6 +174,7 @@
             // rdbTen
             // 
             this.rdbTen.AutoSize = true;
+            this.rdbTen.Checked = true;
             this.rdbTen.Location = new System.Drawing.Point(7, 20);
             this.rdbTen.Name = "rdbTen";
             this.rdbTen.Size = new System.Drawing.Size(49, 17);
@@ -191,7 +190,6 @@
             this.rdbHundred.Name = "rdbHundred";
             this.rdbHundred.Size = new System.Drawing.Size(71, 17);
             this.rdbHundred.TabIndex = 1;
-            this.rdbHundred.TabStop = true;
             this.rdbHundred.Text = "Hundreds";
             this.rdbHundred.UseVisualStyleBackColor = true;
             // 
@@ -202,7 +200,6 @@
             this.rdbThousand.Name = "rdbThousand";
             this.rdbThousand.Size = new System.Drawing.Size(78, 17);
             this.rdbThousand.TabIndex = 2;
-            this.rdbThousand.TabStop = true;
             this.rdbThousand.Text = "Thousands";
             this.rdbThousand.UseVisualStyleBackColor = true;
             // 
@@ -220,6 +217,7 @@
             // rdbRelaxedMode
             // 
             this.rdbRelaxedMode.AutoSize = true;
+            this.rdbRelaxedMode.Checked = true;
             this.rdbRelaxedMode.Location = new System.Drawing.Point(6, 18);
             this.rdbRelaxedMode.Name = "rdbRelaxedMode";
             this.rdbRelaxedMode.Size = new System.Drawing.Size(94, 17);
@@ -235,7 +233,6 @@
             this.rdbTimedMode.Name = "rdbTimedMode";
             this.rdbTimedMode.Size = new System.Drawing.Size(84, 17);
             this.rdbTimedMode.TabIndex = 1;
-            this.rdbTimedMode.TabStop = true;
             this.rdbTimedMode.Text = "Timed Mode";
             this.rdbTimedMode.UseVisualStyleBackColor = true;
             // 
