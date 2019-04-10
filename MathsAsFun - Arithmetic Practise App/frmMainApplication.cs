@@ -34,5 +34,140 @@ namespace MathsAsFun___Arithmetic_Practise_App
             FrmMultiplicationTable frmMultiplicationTable = new FrmMultiplicationTable();
             frmMultiplicationTable.ShowDialog();
         }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            lblFirstNumber.Visible = true;
+            lblOperator.Visible = true;
+            lblSecondNumber.Visible = true;
+            lblEquals.Visible = true;
+            txtAnswer.Visible = true;
+            GetSum();
+        }
+
+        public void GetSum()
+        {
+            int[] twoNumberArray = null;
+            if (rdbPositive.Checked == true)
+            {
+                if (rdbAddition.Checked == true)
+                {
+                    if (rdbTen.Checked == true)
+                    {
+                    }
+                    else if (rdbHundred.Checked == true)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else if (rdbSubtraction.Checked == true)
+                {
+                    if (rdbTen.Checked == true)
+                    {
+                    }
+                    else if (rdbHundred.Checked == true)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else if (rdbMultiplication.Checked == true)
+                {
+                    if (rdbTen.Checked == true)
+                    {
+                    }
+                    else if (rdbHundred.Checked == true)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+                    if (rdbTen.Checked == true)
+                    {
+                    }
+                    else if (rdbHundred.Checked == true)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+            else
+            {
+                if (rdbAddition.Checked == true)
+                {
+                    if (rdbTen.Checked == true)
+                    {
+                    }
+                    else if (rdbHundred.Checked == true)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else if (rdbSubtraction.Checked == true)
+                {
+                    if (rdbTen.Checked == true)
+                    {
+                    }
+                    else if (rdbHundred.Checked == true)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else if (rdbMultiplication.Checked == true)
+                {
+                    if (rdbTen.Checked == true)
+                    {
+                    }
+                    else if (rdbHundred.Checked == true)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+                    if (rdbTen.Checked == true)
+                    {
+                    }
+                    else if (rdbHundred.Checked == true)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+            lblFirstNumber.Text = Convert.ToString(twoNumberArray[0]);
+            lblSecondNumber.Text = Convert.ToString(twoNumberArray[1]);
+        }
     }
 }

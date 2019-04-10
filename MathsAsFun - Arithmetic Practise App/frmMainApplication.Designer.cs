@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainApplication));
             this.btnShowTimesTable = new System.Windows.Forms.Button();
             this.lblNeedHelp = new System.Windows.Forms.Label();
@@ -46,6 +47,16 @@
             this.grpMode = new System.Windows.Forms.GroupBox();
             this.rdbRelaxedMode = new System.Windows.Forms.RadioButton();
             this.rdbTimedMode = new System.Windows.Forms.RadioButton();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.txtAnswer = new System.Windows.Forms.TextBox();
+            this.lblFeedback = new System.Windows.Forms.Label();
+            this.lblFirstNumber = new System.Windows.Forms.Label();
+            this.lblSecondNumber = new System.Windows.Forms.Label();
+            this.lblOperator = new System.Windows.Forms.Label();
+            this.lblEquals = new System.Windows.Forms.Label();
+            this.tmrTimedMode = new System.Windows.Forms.Timer(this.components);
+            this.lblTimerText = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.grpPositiveOrNegative.SuspendLayout();
             this.grpOperation.SuspendLayout();
             this.grpMagnitude.SuspendLayout();
@@ -54,7 +65,7 @@
             // 
             // btnShowTimesTable
             // 
-            this.btnShowTimesTable.Location = new System.Drawing.Point(747, 549);
+            this.btnShowTimesTable.Location = new System.Drawing.Point(547, 12);
             this.btnShowTimesTable.Name = "btnShowTimesTable";
             this.btnShowTimesTable.Size = new System.Drawing.Size(83, 23);
             this.btnShowTimesTable.TabIndex = 1;
@@ -65,7 +76,7 @@
             // lblNeedHelp
             // 
             this.lblNeedHelp.AutoSize = true;
-            this.lblNeedHelp.Location = new System.Drawing.Point(494, 554);
+            this.lblNeedHelp.Location = new System.Drawing.Point(294, 17);
             this.lblNeedHelp.Name = "lblNeedHelp";
             this.lblNeedHelp.Size = new System.Drawing.Size(247, 13);
             this.lblNeedHelp.TabIndex = 2;
@@ -86,7 +97,7 @@
             // rdbNegative
             // 
             this.rdbNegative.AutoSize = true;
-            this.rdbNegative.Location = new System.Drawing.Point(6, 42);
+            this.rdbNegative.Location = new System.Drawing.Point(126, 19);
             this.rdbNegative.Name = "rdbNegative";
             this.rdbNegative.Size = new System.Drawing.Size(68, 17);
             this.rdbNegative.TabIndex = 5;
@@ -139,9 +150,9 @@
             // 
             this.grpPositiveOrNegative.Controls.Add(this.rdbPositive);
             this.grpPositiveOrNegative.Controls.Add(this.rdbNegative);
-            this.grpPositiveOrNegative.Location = new System.Drawing.Point(424, 12);
+            this.grpPositiveOrNegative.Location = new System.Drawing.Point(430, 41);
             this.grpPositiveOrNegative.Name = "grpPositiveOrNegative";
-            this.grpPositiveOrNegative.Size = new System.Drawing.Size(200, 70);
+            this.grpPositiveOrNegative.Size = new System.Drawing.Size(200, 47);
             this.grpPositiveOrNegative.TabIndex = 10;
             this.grpPositiveOrNegative.TabStop = false;
             this.grpPositiveOrNegative.Text = "Select Positive or Negative Numbers";
@@ -152,7 +163,7 @@
             this.grpOperation.Controls.Add(this.rdbSubtraction);
             this.grpOperation.Controls.Add(this.rdbDivision);
             this.grpOperation.Controls.Add(this.rdbMultiplication);
-            this.grpOperation.Location = new System.Drawing.Point(12, 12);
+            this.grpOperation.Location = new System.Drawing.Point(12, 41);
             this.grpOperation.Name = "grpOperation";
             this.grpOperation.Size = new System.Drawing.Size(200, 112);
             this.grpOperation.TabIndex = 11;
@@ -164,9 +175,9 @@
             this.grpMagnitude.Controls.Add(this.rdbThousand);
             this.grpMagnitude.Controls.Add(this.rdbHundred);
             this.grpMagnitude.Controls.Add(this.rdbTen);
-            this.grpMagnitude.Location = new System.Drawing.Point(218, 12);
+            this.grpMagnitude.Location = new System.Drawing.Point(220, 41);
             this.grpMagnitude.Name = "grpMagnitude";
-            this.grpMagnitude.Size = new System.Drawing.Size(200, 89);
+            this.grpMagnitude.Size = new System.Drawing.Size(204, 112);
             this.grpMagnitude.TabIndex = 12;
             this.grpMagnitude.TabStop = false;
             this.grpMagnitude.Text = "Select Number Magnitude";
@@ -207,9 +218,9 @@
             // 
             this.grpMode.Controls.Add(this.rdbTimedMode);
             this.grpMode.Controls.Add(this.rdbRelaxedMode);
-            this.grpMode.Location = new System.Drawing.Point(631, 13);
+            this.grpMode.Location = new System.Drawing.Point(430, 106);
             this.grpMode.Name = "grpMode";
-            this.grpMode.Size = new System.Drawing.Size(200, 69);
+            this.grpMode.Size = new System.Drawing.Size(200, 47);
             this.grpMode.TabIndex = 13;
             this.grpMode.TabStop = false;
             this.grpMode.Text = "Select Mode";
@@ -229,18 +240,129 @@
             // rdbTimedMode
             // 
             this.rdbTimedMode.AutoSize = true;
-            this.rdbTimedMode.Location = new System.Drawing.Point(6, 41);
+            this.rdbTimedMode.Location = new System.Drawing.Point(110, 19);
             this.rdbTimedMode.Name = "rdbTimedMode";
             this.rdbTimedMode.Size = new System.Drawing.Size(84, 17);
             this.rdbTimedMode.TabIndex = 1;
             this.rdbTimedMode.Text = "Timed Mode";
             this.rdbTimedMode.UseVisualStyleBackColor = true;
             // 
+            // btnStart
+            // 
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(12, 159);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(102, 33);
+            this.btnStart.TabIndex = 14;
+            this.btnStart.Text = "Practise!";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
+            // 
+            // txtAnswer
+            // 
+            this.txtAnswer.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnswer.Location = new System.Drawing.Point(376, 156);
+            this.txtAnswer.Name = "txtAnswer";
+            this.txtAnswer.Size = new System.Drawing.Size(171, 39);
+            this.txtAnswer.TabIndex = 16;
+            this.txtAnswer.Visible = false;
+            // 
+            // lblFeedback
+            // 
+            this.lblFeedback.AutoSize = true;
+            this.lblFeedback.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeedback.ForeColor = System.Drawing.Color.Red;
+            this.lblFeedback.Location = new System.Drawing.Point(553, 168);
+            this.lblFeedback.Name = "lblFeedback";
+            this.lblFeedback.Size = new System.Drawing.Size(77, 15);
+            this.lblFeedback.TabIndex = 17;
+            this.lblFeedback.Text = "Incorrect!";
+            this.lblFeedback.Visible = false;
+            // 
+            // lblFirstNumber
+            // 
+            this.lblFirstNumber.AutoSize = true;
+            this.lblFirstNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.lblFirstNumber.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstNumber.Location = new System.Drawing.Point(120, 159);
+            this.lblFirstNumber.Name = "lblFirstNumber";
+            this.lblFirstNumber.Size = new System.Drawing.Size(75, 32);
+            this.lblFirstNumber.TabIndex = 18;
+            this.lblFirstNumber.Text = "9999";
+            this.lblFirstNumber.Visible = false;
+            // 
+            // lblSecondNumber
+            // 
+            this.lblSecondNumber.AutoSize = true;
+            this.lblSecondNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSecondNumber.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecondNumber.Location = new System.Drawing.Point(248, 159);
+            this.lblSecondNumber.Name = "lblSecondNumber";
+            this.lblSecondNumber.Size = new System.Drawing.Size(75, 32);
+            this.lblSecondNumber.TabIndex = 19;
+            this.lblSecondNumber.Text = "9999";
+            this.lblSecondNumber.Visible = false;
+            // 
+            // lblOperator
+            // 
+            this.lblOperator.BackColor = System.Drawing.SystemColors.Control;
+            this.lblOperator.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperator.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblOperator.Location = new System.Drawing.Point(206, 159);
+            this.lblOperator.Name = "lblOperator";
+            this.lblOperator.Size = new System.Drawing.Size(32, 36);
+            this.lblOperator.TabIndex = 20;
+            this.lblOperator.Text = "x";
+            this.lblOperator.Visible = false;
+            // 
+            // lblEquals
+            // 
+            this.lblEquals.AutoSize = true;
+            this.lblEquals.BackColor = System.Drawing.SystemColors.Control;
+            this.lblEquals.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquals.Location = new System.Drawing.Point(334, 159);
+            this.lblEquals.Name = "lblEquals";
+            this.lblEquals.Size = new System.Drawing.Size(30, 32);
+            this.lblEquals.TabIndex = 21;
+            this.lblEquals.Text = "=";
+            this.lblEquals.Visible = false;
+            // 
+            // lblTimerText
+            // 
+            this.lblTimerText.AutoSize = true;
+            this.lblTimerText.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimerText.Location = new System.Drawing.Point(339, 220);
+            this.lblTimerText.Name = "lblTimerText";
+            this.lblTimerText.Size = new System.Drawing.Size(240, 32);
+            this.lblTimerText.TabIndex = 22;
+            this.lblTimerText.Text = "Time Remaining:";
+            this.lblTimerText.Visible = false;
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(585, 220);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(45, 32);
+            this.lblTimer.TabIndex = 23;
+            this.lblTimer.Text = "10";
+            this.lblTimer.Visible = false;
+            // 
             // FrmMainApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 584);
+            this.ClientSize = new System.Drawing.Size(642, 261);
+            this.Controls.Add(this.lblTimer);
+            this.Controls.Add(this.lblTimerText);
+            this.Controls.Add(this.lblEquals);
+            this.Controls.Add(this.lblOperator);
+            this.Controls.Add(this.lblSecondNumber);
+            this.Controls.Add(this.lblFirstNumber);
+            this.Controls.Add(this.lblFeedback);
+            this.Controls.Add(this.txtAnswer);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.grpMode);
             this.Controls.Add(this.grpMagnitude);
             this.Controls.Add(this.grpOperation);
@@ -284,5 +406,15 @@
         private System.Windows.Forms.GroupBox grpMode;
         private System.Windows.Forms.RadioButton rdbTimedMode;
         private System.Windows.Forms.RadioButton rdbRelaxedMode;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.TextBox txtAnswer;
+        private System.Windows.Forms.Label lblFeedback;
+        private System.Windows.Forms.Label lblFirstNumber;
+        private System.Windows.Forms.Label lblSecondNumber;
+        private System.Windows.Forms.Label lblOperator;
+        private System.Windows.Forms.Label lblEquals;
+        private System.Windows.Forms.Timer tmrTimedMode;
+        private System.Windows.Forms.Label lblTimerText;
+        private System.Windows.Forms.Label lblTimer;
     }
 }
