@@ -48,6 +48,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             totalQuestionsAnswered = 0;
             totalQuestionsCorrect = 0;
             lblScore.Font = new Font(lblScore.Font.FontFamily, 20);
+            txtAnswer.Text = null;
             DisplaySum();
         }
 
