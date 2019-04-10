@@ -189,16 +189,16 @@
             this.grpMagnitude.Size = new System.Drawing.Size(204, 112);
             this.grpMagnitude.TabIndex = 12;
             this.grpMagnitude.TabStop = false;
-            this.grpMagnitude.Text = "Select Number Magnitude";
+            this.grpMagnitude.Text = "Select Magnitude";
             // 
             // rdbThousand
             // 
             this.rdbThousand.AutoSize = true;
             this.rdbThousand.Location = new System.Drawing.Point(7, 65);
             this.rdbThousand.Name = "rdbThousand";
-            this.rdbThousand.Size = new System.Drawing.Size(78, 17);
+            this.rdbThousand.Size = new System.Drawing.Size(71, 17);
             this.rdbThousand.TabIndex = 2;
-            this.rdbThousand.Text = "Thousands";
+            this.rdbThousand.Text = "Hundreds";
             this.rdbThousand.UseVisualStyleBackColor = true;
             // 
             // rdbHundred
@@ -206,9 +206,9 @@
             this.rdbHundred.AutoSize = true;
             this.rdbHundred.Location = new System.Drawing.Point(7, 42);
             this.rdbHundred.Name = "rdbHundred";
-            this.rdbHundred.Size = new System.Drawing.Size(71, 17);
+            this.rdbHundred.Size = new System.Drawing.Size(49, 17);
             this.rdbHundred.TabIndex = 1;
-            this.rdbHundred.Text = "Hundreds";
+            this.rdbHundred.Text = "Tens";
             this.rdbHundred.UseVisualStyleBackColor = true;
             // 
             // rdbTen
@@ -220,7 +220,7 @@
             this.rdbTen.Size = new System.Drawing.Size(49, 17);
             this.rdbTen.TabIndex = 0;
             this.rdbTen.TabStop = true;
-            this.rdbTen.Text = "Tens";
+            this.rdbTen.Text = "Units";
             this.rdbTen.UseVisualStyleBackColor = true;
             // 
             // grpMode
