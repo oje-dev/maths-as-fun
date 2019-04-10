@@ -423,5 +423,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
             SetScore(GetPercentage());
             DisplaySum();
         }
+
     }
 }

@@ -56,7 +56,7 @@
             this.lblCopyrightMessage.Location = new System.Drawing.Point(184, 357);
             this.lblCopyrightMessage.Name = "lblCopyrightMessage";
             this.lblCopyrightMessage.Size = new System.Drawing.Size(264, 13);
-            this.lblCopyrightMessage.TabIndex = 0;
+            this.lblCopyrightMessage.TabIndex = 1;
             this.lblCopyrightMessage.Text = "Copyright © 2019 MathsAsFun, inc. All rights reserved.";
             // 
             // prgLoading
@@ -64,7 +64,7 @@
             this.prgLoading.Location = new System.Drawing.Point(12, 318);
             this.prgLoading.Name = "prgLoading";
             this.prgLoading.Size = new System.Drawing.Size(608, 23);
-            this.prgLoading.TabIndex = 2;
+            this.prgLoading.TabIndex = 0;
             // 
             // tmrProgressBar
             // 
@@ -111,7 +111,7 @@
             this.btnContinue.Location = new System.Drawing.Point(865, 322);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(75, 23);
-            this.btnContinue.TabIndex = 6;
+            this.btnContinue.TabIndex = 2;
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = true;
             this.btnContinue.Click += new System.EventHandler(this.BtnContinue_Click);
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 379);
+            this.ClientSize = new System.Drawing.Size(1080, 574);
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.prgLoading);
             this.Controls.Add(this.lblCopyrightMessage);
