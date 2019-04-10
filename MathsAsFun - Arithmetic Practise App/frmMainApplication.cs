@@ -189,21 +189,21 @@ namespace MathsAsFun___Arithmetic_Practise_App
         private int GetAnswer()
         {
             int answer;
-            if (lblOperator.Text == "")
+            if (lblOperator.Text == "+")
             {
-
+                answer = (Convert.ToInt32(lblFirstNumber.Text) + Convert.ToInt32(lblSecondNumber.Text));
             }
-            else if (lblOperator.Text == "")
+            else if (lblOperator.Text == "-")
             {
-
+                answer = (Convert.ToInt32(lblFirstNumber.Text) - Convert.ToInt32(lblSecondNumber.Text));
             }
-            else if (lblOperator.Text == "")
+            else if (lblOperator.Text == "×")
             {
-
+                answer = (Convert.ToInt32(lblFirstNumber.Text) * Convert.ToInt32(lblSecondNumber.Text));
             }
             else
             {
-
+                answer = (Convert.ToInt32(lblFirstNumber.Text) / Convert.ToInt32(lblSecondNumber.Text));
             }
             return answer;
         }
