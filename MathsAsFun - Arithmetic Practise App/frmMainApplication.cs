@@ -13,6 +13,8 @@ namespace MathsAsFun___Arithmetic_Practise_App
     public partial class FrmMainApplication : Form
     {
         readonly Functions functions = new Functions();
+        int totalQuestionsAnswered = 0;
+        int totalQuestionCorrect = 0;
 
         public FrmMainApplication()
         {
@@ -212,8 +214,10 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void CheckAnswer(int answer)
         {
+            totalQuestionsAnswered += 1;
             if (txtAnswer.Text == Convert.ToString(answer))
             {
+                totalQuestionCorrect += 1;
                 lblIncorrect.Visible = false;
                 imgGreenTick.Visible = true;
             }
@@ -235,6 +239,12 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 e.SuppressKeyPress = true;
                 DisplaySum();
             }
+        }
+
+        public double GetPercentage()
+        {
+            double percentageCorrect = (totalQuestionCorrect / totalQuestionsAnswered) * 100;
+            return percentageCorrect;
         }
     }
 }
