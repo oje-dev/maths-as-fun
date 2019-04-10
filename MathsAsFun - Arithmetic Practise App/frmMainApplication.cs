@@ -42,132 +42,167 @@ namespace MathsAsFun___Arithmetic_Practise_App
             lblSecondNumber.Visible = true;
             lblEquals.Visible = true;
             txtAnswer.Visible = true;
-            GetSum();
+            int answer = GetSumReturnAnswer();
+            CheckAnswer(answer);
         }
 
-        public void GetSum()
+        public int GetSumReturnAnswer()
         {
-            int[] twoNumberArray = null;
+            int[] twoNumberArray;
+            int answer;
             if (rdbPositive.Checked == true)
             {
                 if (rdbAddition.Checked == true)
                 {
+                    lblOperator.Text = "+";
                     if (rdbTen.Checked == true)
                     {
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Positive);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Positive);
                     }
                     else
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
                     }
+                    answer = twoNumberArray[0] + twoNumberArray[1];
                 }
                 else if (rdbSubtraction.Checked == true)
                 {
+                    lblOperator.Text = "-";
                     if (rdbTen.Checked == true)
                     {
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Positive);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Positive);
                     }
                     else
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
                     }
+                    answer = twoNumberArray[0] - twoNumberArray[1];
                 }
                 else if (rdbMultiplication.Checked == true)
                 {
+                    lblOperator.Text = "×";
                     if (rdbTen.Checked == true)
                     {
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Positive);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Positive);
                     }
                     else
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
                     }
+                    answer = twoNumberArray[0] * twoNumberArray[1];
                 }
                 else
                 {
+                    lblOperator.Text = "÷";
                     if (rdbTen.Checked == true)
                     {
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Positive);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Positive);
                     }
                     else
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
                     }
+                    answer = twoNumberArray[0] / twoNumberArray[1];
                 }
             }
             else
             {
                 if (rdbAddition.Checked == true)
                 {
+                    lblOperator.Text = "+";
                     if (rdbTen.Checked == true)
                     {
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Negative);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Negative);
                     }
                     else
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
                     }
+                    answer = twoNumberArray[0] + twoNumberArray[1];
                 }
                 else if (rdbSubtraction.Checked == true)
                 {
+                    lblOperator.Text = "-";
                     if (rdbTen.Checked == true)
                     {
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Negative);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Negative);
                     }
                     else
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
                     }
+                    answer = twoNumberArray[0] - twoNumberArray[1];
                 }
                 else if (rdbMultiplication.Checked == true)
                 {
+                    lblOperator.Text = "×";
                     if (rdbTen.Checked == true)
                     {
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Negative);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Negative);
                     }
                     else
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
                     }
+                    answer = twoNumberArray[0] * twoNumberArray[1];
                 }
                 else
                 {
+                    lblOperator.Text = "÷";
                     if (rdbTen.Checked == true)
                     {
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Negative);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Negative);
                     }
                     else
                     {
-
+                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
                     }
+                    answer = twoNumberArray[0] / twoNumberArray[1];
                 }
             }
             lblFirstNumber.Text = Convert.ToString(twoNumberArray[0]);
             lblSecondNumber.Text = Convert.ToString(twoNumberArray[1]);
+            return answer;
+        }
+
+        private void CheckAnswer(int answer)
+        {
+            if (txtAnswer.Text == Convert.ToString(answer))
+            {
+
+            }
         }
     }
 }
