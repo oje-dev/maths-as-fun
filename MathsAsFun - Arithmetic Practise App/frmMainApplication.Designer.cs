@@ -266,6 +266,7 @@
             this.txtAnswer.Size = new System.Drawing.Size(171, 39);
             this.txtAnswer.TabIndex = 16;
             this.txtAnswer.Visible = false;
+            this.txtAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAnswer_KeyDown);
             // 
             // lblFeedback
             // 

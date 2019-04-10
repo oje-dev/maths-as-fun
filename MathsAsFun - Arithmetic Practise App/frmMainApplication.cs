@@ -42,14 +42,12 @@ namespace MathsAsFun___Arithmetic_Practise_App
             lblSecondNumber.Visible = true;
             lblEquals.Visible = true;
             txtAnswer.Visible = true;
-            int answer = GetSumReturnAnswer();
-            CheckAnswer(answer);
+            DisplaySum();
         }
 
-        public int GetSumReturnAnswer()
+        private void DisplaySum()
         {
             int[] twoNumberArray;
-            int answer;
             if (rdbPositive.Checked == true)
             {
                 if (rdbAddition.Checked == true)
@@ -67,7 +65,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
                     }
-                    answer = twoNumberArray[0] + twoNumberArray[1];
                 }
                 else if (rdbSubtraction.Checked == true)
                 {
@@ -84,7 +81,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
                     }
-                    answer = twoNumberArray[0] - twoNumberArray[1];
                 }
                 else if (rdbMultiplication.Checked == true)
                 {
@@ -101,7 +97,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
                     }
-                    answer = twoNumberArray[0] * twoNumberArray[1];
                 }
                 else
                 {
@@ -118,7 +113,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
                     }
-                    answer = twoNumberArray[0] / twoNumberArray[1];
                 }
             }
             else
@@ -138,7 +132,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
                     }
-                    answer = twoNumberArray[0] + twoNumberArray[1];
                 }
                 else if (rdbSubtraction.Checked == true)
                 {
@@ -155,7 +148,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
                     }
-                    answer = twoNumberArray[0] - twoNumberArray[1];
                 }
                 else if (rdbMultiplication.Checked == true)
                 {
@@ -172,7 +164,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
                     }
-                    answer = twoNumberArray[0] * twoNumberArray[1];
                 }
                 else
                 {
@@ -189,11 +180,31 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     {
                         twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
                     }
-                    answer = twoNumberArray[0] / twoNumberArray[1];
                 }
             }
             lblFirstNumber.Text = Convert.ToString(twoNumberArray[0]);
             lblSecondNumber.Text = Convert.ToString(twoNumberArray[1]);
+        }
+
+        private int GetAnswer()
+        {
+            int answer;
+            if (lblOperator.Text == "")
+            {
+
+            }
+            else if (lblOperator.Text == "")
+            {
+
+            }
+            else if (lblOperator.Text == "")
+            {
+
+            }
+            else
+            {
+
+            }
             return answer;
         }
 
@@ -201,7 +212,26 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
             if (txtAnswer.Text == Convert.ToString(answer))
             {
+                lblFeedback.Text = "Correct!";
+                lblFeedback.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblFeedback.Text = Convert.ToString(answer);
+                lblFeedback.ForeColor = Color.Red;
+            }
+            lblFeedback.Visible = true;
+            txtAnswer.Text = null;
+        }
 
+        private void TxtAnswer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CheckAnswer(GetAnswer());
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                DisplaySum();
             }
         }
     }
