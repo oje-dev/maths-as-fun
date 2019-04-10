@@ -32,16 +32,20 @@ namespace MathsAsFun___Arithmetic_Practise_App
             return timesTableArray;
         }
 
-        public int[] GetTwoNumbers(Operation operation, Magnitude magnitude, PostiveOrNegative postiveOrNegative)
+        public int[] GetTwoNumbers(Operation operation, Magnitude magnitude, PostiveOrNegative positiveOrNegative)
         {
             Random random = new Random();
             int[] twoNumbers = new int[2];
             int randomPositiveOrNegative = random.Next(2);
             if (randomPositiveOrNegative == 0)
             {
-                postiveOrNegative = PostiveOrNegative.Positive;
+                positiveOrNegative = PostiveOrNegative.Positive;
             }
-            if (postiveOrNegative == PostiveOrNegative.Positive)
+            if (operation == Operation.Subtraction)
+            {
+                positiveOrNegative = PostiveOrNegative.Negative;
+            }
+            if (positiveOrNegative == PostiveOrNegative.Positive)
             {
                 if (magnitude == Magnitude.Ten)
                 {
