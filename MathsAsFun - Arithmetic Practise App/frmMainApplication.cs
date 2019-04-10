@@ -14,7 +14,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
     {
         readonly Functions functions = new Functions();
         int totalQuestionsAnswered = 0;
-        int totalQuestionCorrect = 0;
+        int totalQuestionsCorrect = 0;
 
         public FrmMainApplication()
         {
@@ -217,7 +217,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             totalQuestionsAnswered += 1;
             if (txtAnswer.Text == Convert.ToString(answer))
             {
-                totalQuestionCorrect += 1;
+                totalQuestionsCorrect += 1;
                 lblIncorrect.Visible = false;
                 imgGreenTick.Visible = true;
             }
@@ -238,12 +238,14 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 e.Handled = true;
                 e.SuppressKeyPress = true;
                 DisplaySum();
+                double percentageCorrect = GetPercentage();
             }
         }
 
         public double GetPercentage()
         {
-            double percentageCorrect = (totalQuestionCorrect / totalQuestionsAnswered) * 100;
+            double percentageCorrect = (Convert.ToDouble(totalQuestionsCorrect) / Convert.ToDouble(totalQuestionsAnswered)) * 100.0;
+            percentageCorrect = Math.Round(percentageCorrect, 2);
             return percentageCorrect;
         }
     }
