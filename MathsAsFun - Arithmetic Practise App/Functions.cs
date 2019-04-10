@@ -8,9 +8,11 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     class Functions
     {
-        enum Operation { };
+        public enum Operation { Addition, Subtraction, Multiplication, Division };
 
-        enum Magnitude { };
+        public enum Magnitude { Ten, Hundred, Thousand };
+
+        public enum PostiveOrNegative { Positive, Negative };
 
         public int[,] TimesTableArrayFunction(int timesTable)
         {
@@ -30,6 +32,137 @@ namespace MathsAsFun___Arithmetic_Practise_App
             return timesTableArray;
         }
 
-
+        public int[] GetTwoNumbers(Operation operation, Magnitude magnitude, PostiveOrNegative postiveOrNegative)
+        {
+            Random random = new Random();
+            int[] twoNumbers = new int[2];
+            if (postiveOrNegative == PostiveOrNegative.Positive)
+            {
+                if (magnitude == Magnitude.Ten)
+                {
+                    if (operation != Operation.Division)
+                    {
+                        for (int i = 0; i < twoNumbers.Length; i++)
+                        {
+                            twoNumbers[i] = random.Next(11);
+                        }
+                    }
+                    else
+                    {
+                        do
+                        {
+                            for (int i = 0; i < twoNumbers.Length; i++)
+                            {
+                                twoNumbers[i] = random.Next(11);
+                            }
+                        } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
+                    }
+                }
+                else if (magnitude == Magnitude.Hundred)
+                {
+                    if (operation != Operation.Division)
+                    {
+                        for (int i = 0; i < twoNumbers.Length; i++)
+                        {
+                            twoNumbers[i] = random.Next(101);
+                        }
+                    }
+                    else
+                    {
+                        do
+                        {
+                            for (int i = 0; i < twoNumbers.Length; i++)
+                            {
+                                twoNumbers[i] = random.Next(101);
+                            }
+                        } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
+                    }
+                }
+                else
+                {
+                    if (operation != Operation.Division)
+                    {
+                        for (int i = 0; i < twoNumbers.Length; i++)
+                        {
+                            twoNumbers[i] = random.Next(1001);
+                        }
+                    }
+                    else
+                    {
+                        do
+                        {
+                            for (int i = 0; i < twoNumbers.Length; i++)
+                            {
+                                twoNumbers[i] = random.Next(1001);
+                            }
+                        } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
+                    }
+                }
+            }
+            else
+            {
+                if (magnitude == Magnitude.Ten)
+                {
+                    if (operation != Operation.Division)
+                    {
+                        for (int i = 0; i < twoNumbers.Length; i++)
+                        {
+                            twoNumbers[i] = random.Next(-10, 11);
+                        }
+                    }
+                    else
+                    {
+                        do
+                        {
+                            for (int i = 0; i < twoNumbers.Length; i++)
+                            {
+                                twoNumbers[i] = random.Next(-10, 11);
+                            }
+                        } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
+                    }
+                }
+                else if (magnitude == Magnitude.Hundred)
+                {
+                    if (operation != Operation.Division)
+                    {
+                        for (int i = 0; i < twoNumbers.Length; i++)
+                        {
+                            twoNumbers[i] = random.Next(-100, 101);
+                        }
+                    }
+                    else
+                    {
+                        do
+                        {
+                            for (int i = 0; i < twoNumbers.Length; i++)
+                            {
+                                twoNumbers[i] = random.Next(-100, 101);
+                            }
+                        } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
+                    }
+                }
+                else
+                {
+                    if (operation != Operation.Division)
+                    {
+                        for (int i = 0; i < twoNumbers.Length; i++)
+                        {
+                            twoNumbers[i] = random.Next(-1000, 1001);
+                        }
+                    }
+                    else
+                    {
+                        do
+                        {
+                            for (int i = 0; i < twoNumbers.Length; i++)
+                            {
+                                twoNumbers[i] = random.Next(-1000, 1001);
+                            }
+                        } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
+                    }
+                }
+            }
+            return twoNumbers;
+        }
     }
 }
