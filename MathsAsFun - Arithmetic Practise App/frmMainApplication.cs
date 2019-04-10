@@ -184,6 +184,8 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
             lblFirstNumber.Text = Convert.ToString(twoNumberArray[0]);
             lblSecondNumber.Text = Convert.ToString(twoNumberArray[1]);
+            lblFirstNumber.Location = new Point((pnlFirstNumber.Width - lblFirstNumber.Width) / 2, ((pnlFirstNumber.Height - lblFirstNumber.Height)) / 2);
+            lblSecondNumber.Location = new Point((pnlSecondNumber.Width - lblSecondNumber.Width) / 2, ((pnlSecondNumber.Height - lblSecondNumber.Height)) / 2);
         }
 
         private int GetAnswer()

@@ -58,11 +58,15 @@
             this.lblTimerText = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
             this.imgGreenTick = new System.Windows.Forms.PictureBox();
+            this.pnlFirstNumber = new System.Windows.Forms.Panel();
+            this.pnlSecondNumber = new System.Windows.Forms.Panel();
             this.grpPositiveOrNegative.SuspendLayout();
             this.grpOperation.SuspendLayout();
             this.grpMagnitude.SuspendLayout();
             this.grpMode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgGreenTick)).BeginInit();
+            this.pnlFirstNumber.SuspendLayout();
+            this.pnlSecondNumber.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShowTimesTable
@@ -287,7 +291,7 @@
             this.lblFirstNumber.AutoSize = true;
             this.lblFirstNumber.BackColor = System.Drawing.SystemColors.Control;
             this.lblFirstNumber.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstNumber.Location = new System.Drawing.Point(120, 159);
+            this.lblFirstNumber.Location = new System.Drawing.Point(3, 0);
             this.lblFirstNumber.Name = "lblFirstNumber";
             this.lblFirstNumber.Size = new System.Drawing.Size(75, 32);
             this.lblFirstNumber.TabIndex = 18;
@@ -299,7 +303,7 @@
             this.lblSecondNumber.AutoSize = true;
             this.lblSecondNumber.BackColor = System.Drawing.SystemColors.Control;
             this.lblSecondNumber.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSecondNumber.Location = new System.Drawing.Point(248, 159);
+            this.lblSecondNumber.Location = new System.Drawing.Point(5, 0);
             this.lblSecondNumber.Name = "lblSecondNumber";
             this.lblSecondNumber.Size = new System.Drawing.Size(75, 32);
             this.lblSecondNumber.TabIndex = 19;
@@ -362,18 +366,34 @@
             this.imgGreenTick.TabStop = false;
             this.imgGreenTick.Visible = false;
             // 
+            // pnlFirstNumber
+            // 
+            this.pnlFirstNumber.Controls.Add(this.lblFirstNumber);
+            this.pnlFirstNumber.Location = new System.Drawing.Point(120, 160);
+            this.pnlFirstNumber.Name = "pnlFirstNumber";
+            this.pnlFirstNumber.Size = new System.Drawing.Size(80, 32);
+            this.pnlFirstNumber.TabIndex = 25;
+            // 
+            // pnlSecondNumber
+            // 
+            this.pnlSecondNumber.Controls.Add(this.lblSecondNumber);
+            this.pnlSecondNumber.Location = new System.Drawing.Point(244, 160);
+            this.pnlSecondNumber.Name = "pnlSecondNumber";
+            this.pnlSecondNumber.Size = new System.Drawing.Size(84, 32);
+            this.pnlSecondNumber.TabIndex = 26;
+            // 
             // FrmMainApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 261);
+            this.Controls.Add(this.pnlSecondNumber);
+            this.Controls.Add(this.pnlFirstNumber);
             this.Controls.Add(this.imgGreenTick);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblTimerText);
             this.Controls.Add(this.lblEquals);
             this.Controls.Add(this.lblOperator);
-            this.Controls.Add(this.lblSecondNumber);
-            this.Controls.Add(this.lblFirstNumber);
             this.Controls.Add(this.lblIncorrect);
             this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.btnStart);
@@ -398,6 +418,10 @@
             this.grpMode.ResumeLayout(false);
             this.grpMode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgGreenTick)).EndInit();
+            this.pnlFirstNumber.ResumeLayout(false);
+            this.pnlFirstNumber.PerformLayout();
+            this.pnlSecondNumber.ResumeLayout(false);
+            this.pnlSecondNumber.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,5 +456,7 @@
         private System.Windows.Forms.Label lblTimerText;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.PictureBox imgGreenTick;
+        private System.Windows.Forms.Panel pnlFirstNumber;
+        private System.Windows.Forms.Panel pnlSecondNumber;
     }
 }
