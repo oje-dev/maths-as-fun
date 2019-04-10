@@ -52,7 +52,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             txtAnswer.Text = null;
             if (rdbTimedMode.Checked == true)
             {
-                GetTimeRemaining();
+                GetTimeAllowed();
             }
             DisplaySum();
         }
@@ -290,7 +290,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        public void GetTimeRemaining()
+        public void GetTimeAllowed()
         {
             if (rdbAddition.Checked == true)
             {
