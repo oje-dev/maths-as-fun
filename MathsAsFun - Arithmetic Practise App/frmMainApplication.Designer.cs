@@ -62,6 +62,7 @@
             this.pnlSecondNumber = new System.Windows.Forms.Panel();
             this.lblScore = new System.Windows.Forms.Label();
             this.pnlTimer = new System.Windows.Forms.Panel();
+            this.imgInAppLogo = new System.Windows.Forms.PictureBox();
             this.grpPositiveOrNegative.SuspendLayout();
             this.grpOperation.SuspendLayout();
             this.grpMagnitude.SuspendLayout();
@@ -70,11 +71,12 @@
             this.pnlFirstNumber.SuspendLayout();
             this.pnlSecondNumber.SuspendLayout();
             this.pnlTimer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgInAppLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnShowTimesTable
             // 
-            this.btnShowTimesTable.Location = new System.Drawing.Point(621, 4);
+            this.btnShowTimesTable.Location = new System.Drawing.Point(621, 27);
             this.btnShowTimesTable.Name = "btnShowTimesTable";
             this.btnShowTimesTable.Size = new System.Drawing.Size(83, 23);
             this.btnShowTimesTable.TabIndex = 1;
@@ -85,7 +87,7 @@
             // lblNeedHelp
             // 
             this.lblNeedHelp.AutoSize = true;
-            this.lblNeedHelp.Location = new System.Drawing.Point(368, 9);
+            this.lblNeedHelp.Location = new System.Drawing.Point(457, 9);
             this.lblNeedHelp.Name = "lblNeedHelp";
             this.lblNeedHelp.Size = new System.Drawing.Size(247, 13);
             this.lblNeedHelp.TabIndex = 2;
@@ -97,20 +99,20 @@
             this.rdbPositive.Checked = true;
             this.rdbPositive.Location = new System.Drawing.Point(6, 19);
             this.rdbPositive.Name = "rdbPositive";
-            this.rdbPositive.Size = new System.Drawing.Size(62, 17);
+            this.rdbPositive.Size = new System.Drawing.Size(86, 17);
             this.rdbPositive.TabIndex = 4;
             this.rdbPositive.TabStop = true;
-            this.rdbPositive.Text = "Positive";
+            this.rdbPositive.Text = "Only Positive";
             this.rdbPositive.UseVisualStyleBackColor = true;
             // 
             // rdbNegative
             // 
             this.rdbNegative.AutoSize = true;
-            this.rdbNegative.Location = new System.Drawing.Point(126, 19);
+            this.rdbNegative.Location = new System.Drawing.Point(5, 42);
             this.rdbNegative.Name = "rdbNegative";
-            this.rdbNegative.Size = new System.Drawing.Size(68, 17);
+            this.rdbNegative.Size = new System.Drawing.Size(106, 17);
             this.rdbNegative.TabIndex = 5;
-            this.rdbNegative.Text = "Negative";
+            this.rdbNegative.Text = "Include Negative";
             this.rdbNegative.UseVisualStyleBackColor = true;
             // 
             // rdbAddition
@@ -159,12 +161,12 @@
             // 
             this.grpPositiveOrNegative.Controls.Add(this.rdbPositive);
             this.grpPositiveOrNegative.Controls.Add(this.rdbNegative);
-            this.grpPositiveOrNegative.Location = new System.Drawing.Point(504, 41);
+            this.grpPositiveOrNegative.Location = new System.Drawing.Point(504, 76);
             this.grpPositiveOrNegative.Name = "grpPositiveOrNegative";
-            this.grpPositiveOrNegative.Size = new System.Drawing.Size(200, 47);
+            this.grpPositiveOrNegative.Size = new System.Drawing.Size(200, 70);
             this.grpPositiveOrNegative.TabIndex = 10;
             this.grpPositiveOrNegative.TabStop = false;
-            this.grpPositiveOrNegative.Text = "Select Positive or Negative Numbers";
+            this.grpPositiveOrNegative.Text = "Include Negative Numbers?";
             // 
             // grpOperation
             // 
@@ -172,9 +174,9 @@
             this.grpOperation.Controls.Add(this.rdbSubtraction);
             this.grpOperation.Controls.Add(this.rdbDivision);
             this.grpOperation.Controls.Add(this.rdbMultiplication);
-            this.grpOperation.Location = new System.Drawing.Point(12, 41);
+            this.grpOperation.Location = new System.Drawing.Point(12, 76);
             this.grpOperation.Name = "grpOperation";
-            this.grpOperation.Size = new System.Drawing.Size(200, 112);
+            this.grpOperation.Size = new System.Drawing.Size(200, 123);
             this.grpOperation.TabIndex = 11;
             this.grpOperation.TabStop = false;
             this.grpOperation.Text = "Select Operation";
@@ -184,9 +186,9 @@
             this.grpMagnitude.Controls.Add(this.rdbThousand);
             this.grpMagnitude.Controls.Add(this.rdbHundred);
             this.grpMagnitude.Controls.Add(this.rdbTen);
-            this.grpMagnitude.Location = new System.Drawing.Point(256, 41);
+            this.grpMagnitude.Location = new System.Drawing.Point(256, 76);
             this.grpMagnitude.Name = "grpMagnitude";
-            this.grpMagnitude.Size = new System.Drawing.Size(204, 112);
+            this.grpMagnitude.Size = new System.Drawing.Size(204, 123);
             this.grpMagnitude.TabIndex = 12;
             this.grpMagnitude.TabStop = false;
             this.grpMagnitude.Text = "Select Magnitude";
@@ -227,7 +229,7 @@
             // 
             this.grpMode.Controls.Add(this.rdbTimedMode);
             this.grpMode.Controls.Add(this.rdbRelaxedMode);
-            this.grpMode.Location = new System.Drawing.Point(504, 106);
+            this.grpMode.Location = new System.Drawing.Point(504, 152);
             this.grpMode.Name = "grpMode";
             this.grpMode.Size = new System.Drawing.Size(200, 47);
             this.grpMode.TabIndex = 13;
@@ -259,7 +261,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(12, 164);
+            this.btnStart.Location = new System.Drawing.Point(12, 205);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(102, 33);
             this.btnStart.TabIndex = 14;
@@ -270,7 +272,7 @@
             // txtAnswer
             // 
             this.txtAnswer.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnswer.Location = new System.Drawing.Point(376, 161);
+            this.txtAnswer.Location = new System.Drawing.Point(370, 206);
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(171, 39);
             this.txtAnswer.TabIndex = 16;
@@ -282,7 +284,7 @@
             this.lblIncorrect.AutoSize = true;
             this.lblIncorrect.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
-            this.lblIncorrect.Location = new System.Drawing.Point(553, 164);
+            this.lblIncorrect.Location = new System.Drawing.Point(547, 209);
             this.lblIncorrect.Name = "lblIncorrect";
             this.lblIncorrect.Size = new System.Drawing.Size(165, 32);
             this.lblIncorrect.TabIndex = 17;
@@ -318,7 +320,7 @@
             this.lblOperator.BackColor = System.Drawing.SystemColors.Control;
             this.lblOperator.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperator.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblOperator.Location = new System.Drawing.Point(206, 164);
+            this.lblOperator.Location = new System.Drawing.Point(206, 205);
             this.lblOperator.Name = "lblOperator";
             this.lblOperator.Size = new System.Drawing.Size(32, 36);
             this.lblOperator.TabIndex = 20;
@@ -330,7 +332,7 @@
             this.lblEquals.AutoSize = true;
             this.lblEquals.BackColor = System.Drawing.SystemColors.Control;
             this.lblEquals.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEquals.Location = new System.Drawing.Point(334, 164);
+            this.lblEquals.Location = new System.Drawing.Point(334, 205);
             this.lblEquals.Name = "lblEquals";
             this.lblEquals.Size = new System.Drawing.Size(30, 32);
             this.lblEquals.TabIndex = 21;
@@ -346,7 +348,7 @@
             // 
             this.lblTimerText.AutoSize = true;
             this.lblTimerText.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimerText.Location = new System.Drawing.Point(570, 224);
+            this.lblTimerText.Location = new System.Drawing.Point(570, 259);
             this.lblTimerText.Name = "lblTimerText";
             this.lblTimerText.Size = new System.Drawing.Size(77, 28);
             this.lblTimerText.TabIndex = 22;
@@ -367,7 +369,7 @@
             // imgGreenTick
             // 
             this.imgGreenTick.Image = ((System.Drawing.Image)(resources.GetObject("imgGreenTick.Image")));
-            this.imgGreenTick.Location = new System.Drawing.Point(553, 161);
+            this.imgGreenTick.Location = new System.Drawing.Point(547, 206);
             this.imgGreenTick.Name = "imgGreenTick";
             this.imgGreenTick.Size = new System.Drawing.Size(40, 39);
             this.imgGreenTick.TabIndex = 24;
@@ -377,7 +379,7 @@
             // pnlFirstNumber
             // 
             this.pnlFirstNumber.Controls.Add(this.lblFirstNumber);
-            this.pnlFirstNumber.Location = new System.Drawing.Point(120, 165);
+            this.pnlFirstNumber.Location = new System.Drawing.Point(120, 206);
             this.pnlFirstNumber.Name = "pnlFirstNumber";
             this.pnlFirstNumber.Size = new System.Drawing.Size(80, 32);
             this.pnlFirstNumber.TabIndex = 25;
@@ -385,7 +387,7 @@
             // pnlSecondNumber
             // 
             this.pnlSecondNumber.Controls.Add(this.lblSecondNumber);
-            this.pnlSecondNumber.Location = new System.Drawing.Point(244, 165);
+            this.pnlSecondNumber.Location = new System.Drawing.Point(244, 206);
             this.pnlSecondNumber.Name = "pnlSecondNumber";
             this.pnlSecondNumber.Size = new System.Drawing.Size(84, 32);
             this.pnlSecondNumber.TabIndex = 26;
@@ -394,7 +396,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(12, 220);
+            this.lblScore.Location = new System.Drawing.Point(12, 256);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(90, 32);
             this.lblScore.TabIndex = 27;
@@ -404,16 +406,26 @@
             // pnlTimer
             // 
             this.pnlTimer.Controls.Add(this.lblTimer);
-            this.pnlTimer.Location = new System.Drawing.Point(653, 224);
+            this.pnlTimer.Location = new System.Drawing.Point(653, 259);
             this.pnlTimer.Name = "pnlTimer";
             this.pnlTimer.Size = new System.Drawing.Size(51, 28);
             this.pnlTimer.TabIndex = 28;
+            // 
+            // imgInAppLogo
+            // 
+            this.imgInAppLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgInAppLogo.Image")));
+            this.imgInAppLogo.Location = new System.Drawing.Point(12, 12);
+            this.imgInAppLogo.Name = "imgInAppLogo";
+            this.imgInAppLogo.Size = new System.Drawing.Size(439, 58);
+            this.imgInAppLogo.TabIndex = 29;
+            this.imgInAppLogo.TabStop = false;
             // 
             // FrmMainApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 261);
+            this.ClientSize = new System.Drawing.Size(716, 302);
+            this.Controls.Add(this.imgInAppLogo);
             this.Controls.Add(this.pnlTimer);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pnlSecondNumber);
@@ -455,6 +467,7 @@
             this.pnlSecondNumber.PerformLayout();
             this.pnlTimer.ResumeLayout(false);
             this.pnlTimer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgInAppLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,5 +506,6 @@
         private System.Windows.Forms.Panel pnlSecondNumber;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Panel pnlTimer;
+        private System.Windows.Forms.PictureBox imgInAppLogo;
     }
 }
