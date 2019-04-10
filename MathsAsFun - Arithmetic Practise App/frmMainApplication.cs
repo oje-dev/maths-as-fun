@@ -212,15 +212,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
             if (txtAnswer.Text == Convert.ToString(answer))
             {
-                lblFeedback.Text = "Correct!";
-                lblFeedback.ForeColor = Color.Green;
+                lblIncorrect.Visible = false;
+                imgGreenTick.Visible = true;
             }
             else
             {
-                lblFeedback.Text = Convert.ToString(answer);
-                lblFeedback.ForeColor = Color.Red;
+                imgGreenTick.Visible = false;
+                lblIncorrect.Visible = true;
+                lblIncorrect.Text = Convert.ToString(answer) + "!";
             }
-            lblFeedback.Visible = true;
             txtAnswer.Text = null;
         }
 

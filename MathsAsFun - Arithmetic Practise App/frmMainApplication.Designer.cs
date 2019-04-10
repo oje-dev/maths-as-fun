@@ -41,15 +41,15 @@
             this.grpPositiveOrNegative = new System.Windows.Forms.GroupBox();
             this.grpOperation = new System.Windows.Forms.GroupBox();
             this.grpMagnitude = new System.Windows.Forms.GroupBox();
-            this.rdbTen = new System.Windows.Forms.RadioButton();
-            this.rdbHundred = new System.Windows.Forms.RadioButton();
             this.rdbThousand = new System.Windows.Forms.RadioButton();
+            this.rdbHundred = new System.Windows.Forms.RadioButton();
+            this.rdbTen = new System.Windows.Forms.RadioButton();
             this.grpMode = new System.Windows.Forms.GroupBox();
-            this.rdbRelaxedMode = new System.Windows.Forms.RadioButton();
             this.rdbTimedMode = new System.Windows.Forms.RadioButton();
+            this.rdbRelaxedMode = new System.Windows.Forms.RadioButton();
             this.btnStart = new System.Windows.Forms.Button();
             this.txtAnswer = new System.Windows.Forms.TextBox();
-            this.lblFeedback = new System.Windows.Forms.Label();
+            this.lblIncorrect = new System.Windows.Forms.Label();
             this.lblFirstNumber = new System.Windows.Forms.Label();
             this.lblSecondNumber = new System.Windows.Forms.Label();
             this.lblOperator = new System.Windows.Forms.Label();
@@ -57,15 +57,17 @@
             this.tmrTimedMode = new System.Windows.Forms.Timer(this.components);
             this.lblTimerText = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
+            this.imgGreenTick = new System.Windows.Forms.PictureBox();
             this.grpPositiveOrNegative.SuspendLayout();
             this.grpOperation.SuspendLayout();
             this.grpMagnitude.SuspendLayout();
             this.grpMode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGreenTick)).BeginInit();
             this.SuspendLayout();
             // 
             // btnShowTimesTable
             // 
-            this.btnShowTimesTable.Location = new System.Drawing.Point(547, 12);
+            this.btnShowTimesTable.Location = new System.Drawing.Point(621, 12);
             this.btnShowTimesTable.Name = "btnShowTimesTable";
             this.btnShowTimesTable.Size = new System.Drawing.Size(83, 23);
             this.btnShowTimesTable.TabIndex = 1;
@@ -76,7 +78,7 @@
             // lblNeedHelp
             // 
             this.lblNeedHelp.AutoSize = true;
-            this.lblNeedHelp.Location = new System.Drawing.Point(294, 17);
+            this.lblNeedHelp.Location = new System.Drawing.Point(368, 17);
             this.lblNeedHelp.Name = "lblNeedHelp";
             this.lblNeedHelp.Size = new System.Drawing.Size(247, 13);
             this.lblNeedHelp.TabIndex = 2;
@@ -150,7 +152,7 @@
             // 
             this.grpPositiveOrNegative.Controls.Add(this.rdbPositive);
             this.grpPositiveOrNegative.Controls.Add(this.rdbNegative);
-            this.grpPositiveOrNegative.Location = new System.Drawing.Point(430, 41);
+            this.grpPositiveOrNegative.Location = new System.Drawing.Point(504, 41);
             this.grpPositiveOrNegative.Name = "grpPositiveOrNegative";
             this.grpPositiveOrNegative.Size = new System.Drawing.Size(200, 47);
             this.grpPositiveOrNegative.TabIndex = 10;
@@ -175,12 +177,32 @@
             this.grpMagnitude.Controls.Add(this.rdbThousand);
             this.grpMagnitude.Controls.Add(this.rdbHundred);
             this.grpMagnitude.Controls.Add(this.rdbTen);
-            this.grpMagnitude.Location = new System.Drawing.Point(220, 41);
+            this.grpMagnitude.Location = new System.Drawing.Point(256, 41);
             this.grpMagnitude.Name = "grpMagnitude";
             this.grpMagnitude.Size = new System.Drawing.Size(204, 112);
             this.grpMagnitude.TabIndex = 12;
             this.grpMagnitude.TabStop = false;
             this.grpMagnitude.Text = "Select Number Magnitude";
+            // 
+            // rdbThousand
+            // 
+            this.rdbThousand.AutoSize = true;
+            this.rdbThousand.Location = new System.Drawing.Point(7, 65);
+            this.rdbThousand.Name = "rdbThousand";
+            this.rdbThousand.Size = new System.Drawing.Size(78, 17);
+            this.rdbThousand.TabIndex = 2;
+            this.rdbThousand.Text = "Thousands";
+            this.rdbThousand.UseVisualStyleBackColor = true;
+            // 
+            // rdbHundred
+            // 
+            this.rdbHundred.AutoSize = true;
+            this.rdbHundred.Location = new System.Drawing.Point(7, 42);
+            this.rdbHundred.Name = "rdbHundred";
+            this.rdbHundred.Size = new System.Drawing.Size(71, 17);
+            this.rdbHundred.TabIndex = 1;
+            this.rdbHundred.Text = "Hundreds";
+            this.rdbHundred.UseVisualStyleBackColor = true;
             // 
             // rdbTen
             // 
@@ -194,36 +216,26 @@
             this.rdbTen.Text = "Tens";
             this.rdbTen.UseVisualStyleBackColor = true;
             // 
-            // rdbHundred
-            // 
-            this.rdbHundred.AutoSize = true;
-            this.rdbHundred.Location = new System.Drawing.Point(7, 42);
-            this.rdbHundred.Name = "rdbHundred";
-            this.rdbHundred.Size = new System.Drawing.Size(71, 17);
-            this.rdbHundred.TabIndex = 1;
-            this.rdbHundred.Text = "Hundreds";
-            this.rdbHundred.UseVisualStyleBackColor = true;
-            // 
-            // rdbThousand
-            // 
-            this.rdbThousand.AutoSize = true;
-            this.rdbThousand.Location = new System.Drawing.Point(7, 65);
-            this.rdbThousand.Name = "rdbThousand";
-            this.rdbThousand.Size = new System.Drawing.Size(78, 17);
-            this.rdbThousand.TabIndex = 2;
-            this.rdbThousand.Text = "Thousands";
-            this.rdbThousand.UseVisualStyleBackColor = true;
-            // 
             // grpMode
             // 
             this.grpMode.Controls.Add(this.rdbTimedMode);
             this.grpMode.Controls.Add(this.rdbRelaxedMode);
-            this.grpMode.Location = new System.Drawing.Point(430, 106);
+            this.grpMode.Location = new System.Drawing.Point(504, 106);
             this.grpMode.Name = "grpMode";
             this.grpMode.Size = new System.Drawing.Size(200, 47);
             this.grpMode.TabIndex = 13;
             this.grpMode.TabStop = false;
             this.grpMode.Text = "Select Mode";
+            // 
+            // rdbTimedMode
+            // 
+            this.rdbTimedMode.AutoSize = true;
+            this.rdbTimedMode.Location = new System.Drawing.Point(110, 19);
+            this.rdbTimedMode.Name = "rdbTimedMode";
+            this.rdbTimedMode.Size = new System.Drawing.Size(84, 17);
+            this.rdbTimedMode.TabIndex = 1;
+            this.rdbTimedMode.Text = "Timed Mode";
+            this.rdbTimedMode.UseVisualStyleBackColor = true;
             // 
             // rdbRelaxedMode
             // 
@@ -236,16 +248,6 @@
             this.rdbRelaxedMode.TabStop = true;
             this.rdbRelaxedMode.Text = "Relaxed Mode";
             this.rdbRelaxedMode.UseVisualStyleBackColor = true;
-            // 
-            // rdbTimedMode
-            // 
-            this.rdbTimedMode.AutoSize = true;
-            this.rdbTimedMode.Location = new System.Drawing.Point(110, 19);
-            this.rdbTimedMode.Name = "rdbTimedMode";
-            this.rdbTimedMode.Size = new System.Drawing.Size(84, 17);
-            this.rdbTimedMode.TabIndex = 1;
-            this.rdbTimedMode.Text = "Timed Mode";
-            this.rdbTimedMode.UseVisualStyleBackColor = true;
             // 
             // btnStart
             // 
@@ -268,17 +270,17 @@
             this.txtAnswer.Visible = false;
             this.txtAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAnswer_KeyDown);
             // 
-            // lblFeedback
+            // lblIncorrect
             // 
-            this.lblFeedback.AutoSize = true;
-            this.lblFeedback.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFeedback.ForeColor = System.Drawing.Color.Red;
-            this.lblFeedback.Location = new System.Drawing.Point(553, 168);
-            this.lblFeedback.Name = "lblFeedback";
-            this.lblFeedback.Size = new System.Drawing.Size(77, 15);
-            this.lblFeedback.TabIndex = 17;
-            this.lblFeedback.Text = "Incorrect!";
-            this.lblFeedback.Visible = false;
+            this.lblIncorrect.AutoSize = true;
+            this.lblIncorrect.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
+            this.lblIncorrect.Location = new System.Drawing.Point(553, 159);
+            this.lblIncorrect.Name = "lblIncorrect";
+            this.lblIncorrect.Size = new System.Drawing.Size(165, 32);
+            this.lblIncorrect.TabIndex = 17;
+            this.lblIncorrect.Text = "-99980001!";
+            this.lblIncorrect.Visible = false;
             // 
             // lblFirstNumber
             // 
@@ -332,7 +334,7 @@
             // 
             this.lblTimerText.AutoSize = true;
             this.lblTimerText.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimerText.Location = new System.Drawing.Point(339, 220);
+            this.lblTimerText.Location = new System.Drawing.Point(413, 220);
             this.lblTimerText.Name = "lblTimerText";
             this.lblTimerText.Size = new System.Drawing.Size(240, 32);
             this.lblTimerText.TabIndex = 22;
@@ -343,25 +345,36 @@
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(585, 220);
+            this.lblTimer.Location = new System.Drawing.Point(659, 220);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(45, 32);
             this.lblTimer.TabIndex = 23;
             this.lblTimer.Text = "10";
             this.lblTimer.Visible = false;
             // 
+            // imgGreenTick
+            // 
+            this.imgGreenTick.Image = ((System.Drawing.Image)(resources.GetObject("imgGreenTick.Image")));
+            this.imgGreenTick.Location = new System.Drawing.Point(553, 156);
+            this.imgGreenTick.Name = "imgGreenTick";
+            this.imgGreenTick.Size = new System.Drawing.Size(40, 39);
+            this.imgGreenTick.TabIndex = 24;
+            this.imgGreenTick.TabStop = false;
+            this.imgGreenTick.Visible = false;
+            // 
             // FrmMainApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 261);
+            this.ClientSize = new System.Drawing.Size(716, 261);
+            this.Controls.Add(this.imgGreenTick);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblTimerText);
             this.Controls.Add(this.lblEquals);
             this.Controls.Add(this.lblOperator);
             this.Controls.Add(this.lblSecondNumber);
             this.Controls.Add(this.lblFirstNumber);
-            this.Controls.Add(this.lblFeedback);
+            this.Controls.Add(this.lblIncorrect);
             this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.grpMode);
@@ -384,6 +397,7 @@
             this.grpMagnitude.PerformLayout();
             this.grpMode.ResumeLayout(false);
             this.grpMode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGreenTick)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,7 +423,7 @@
         private System.Windows.Forms.RadioButton rdbRelaxedMode;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.TextBox txtAnswer;
-        private System.Windows.Forms.Label lblFeedback;
+        private System.Windows.Forms.Label lblIncorrect;
         private System.Windows.Forms.Label lblFirstNumber;
         private System.Windows.Forms.Label lblSecondNumber;
         private System.Windows.Forms.Label lblOperator;
@@ -417,5 +431,6 @@
         private System.Windows.Forms.Timer tmrTimedMode;
         private System.Windows.Forms.Label lblTimerText;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.PictureBox imgGreenTick;
     }
 }
