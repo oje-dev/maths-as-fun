@@ -275,7 +275,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             else if (percentageCorrect >= 60)
             {
                 lblScore.Text += " Keep Going!";
-                lblScore.ForeColor = Color.Goldenrod;
+                lblScore.ForeColor = ColorTranslator.FromHtml("#FAB005");
             }
             else
             {

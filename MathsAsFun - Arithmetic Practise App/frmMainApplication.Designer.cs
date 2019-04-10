@@ -257,7 +257,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(12, 159);
+            this.btnStart.Location = new System.Drawing.Point(12, 164);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(102, 33);
             this.btnStart.TabIndex = 14;
@@ -268,7 +268,7 @@
             // txtAnswer
             // 
             this.txtAnswer.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnswer.Location = new System.Drawing.Point(376, 156);
+            this.txtAnswer.Location = new System.Drawing.Point(376, 161);
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(171, 39);
             this.txtAnswer.TabIndex = 16;
@@ -280,7 +280,7 @@
             this.lblIncorrect.AutoSize = true;
             this.lblIncorrect.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
-            this.lblIncorrect.Location = new System.Drawing.Point(553, 159);
+            this.lblIncorrect.Location = new System.Drawing.Point(553, 164);
             this.lblIncorrect.Name = "lblIncorrect";
             this.lblIncorrect.Size = new System.Drawing.Size(165, 32);
             this.lblIncorrect.TabIndex = 17;
@@ -316,7 +316,7 @@
             this.lblOperator.BackColor = System.Drawing.SystemColors.Control;
             this.lblOperator.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperator.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblOperator.Location = new System.Drawing.Point(206, 159);
+            this.lblOperator.Location = new System.Drawing.Point(206, 164);
             this.lblOperator.Name = "lblOperator";
             this.lblOperator.Size = new System.Drawing.Size(32, 36);
             this.lblOperator.TabIndex = 20;
@@ -328,7 +328,7 @@
             this.lblEquals.AutoSize = true;
             this.lblEquals.BackColor = System.Drawing.SystemColors.Control;
             this.lblEquals.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEquals.Location = new System.Drawing.Point(334, 159);
+            this.lblEquals.Location = new System.Drawing.Point(334, 164);
             this.lblEquals.Name = "lblEquals";
             this.lblEquals.Size = new System.Drawing.Size(30, 32);
             this.lblEquals.TabIndex = 21;
@@ -360,7 +360,7 @@
             // imgGreenTick
             // 
             this.imgGreenTick.Image = ((System.Drawing.Image)(resources.GetObject("imgGreenTick.Image")));
-            this.imgGreenTick.Location = new System.Drawing.Point(553, 156);
+            this.imgGreenTick.Location = new System.Drawing.Point(553, 161);
             this.imgGreenTick.Name = "imgGreenTick";
             this.imgGreenTick.Size = new System.Drawing.Size(40, 39);
             this.imgGreenTick.TabIndex = 24;
@@ -370,7 +370,7 @@
             // pnlFirstNumber
             // 
             this.pnlFirstNumber.Controls.Add(this.lblFirstNumber);
-            this.pnlFirstNumber.Location = new System.Drawing.Point(120, 160);
+            this.pnlFirstNumber.Location = new System.Drawing.Point(120, 165);
             this.pnlFirstNumber.Name = "pnlFirstNumber";
             this.pnlFirstNumber.Size = new System.Drawing.Size(80, 32);
             this.pnlFirstNumber.TabIndex = 25;
@@ -378,7 +378,7 @@
             // pnlSecondNumber
             // 
             this.pnlSecondNumber.Controls.Add(this.lblSecondNumber);
-            this.pnlSecondNumber.Location = new System.Drawing.Point(244, 160);
+            this.pnlSecondNumber.Location = new System.Drawing.Point(244, 165);
             this.pnlSecondNumber.Name = "pnlSecondNumber";
             this.pnlSecondNumber.Size = new System.Drawing.Size(84, 32);
             this.pnlSecondNumber.TabIndex = 26;
