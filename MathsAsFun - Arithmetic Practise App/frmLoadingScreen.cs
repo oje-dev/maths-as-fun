@@ -42,7 +42,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
             switch (timeElapsed) //Dictates what events occur at set intervals of time.
             {
-                case 1000:
+                case 1000: //After one second the entire look of the form is changed to give the appearance that a new form has been opened.
                     imgLogo.Visible = false;
                     prgLoading.Visible = false;
                     lblCopyrightMessage.Visible = false;
@@ -82,7 +82,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             timeElapsed += 10;
         }
 
-        private void BtnContinue_Click(object sender, EventArgs e)
+        private void BtnContinue_Click(object sender, EventArgs e) //Button hides the loading screen form when clicked and shows the main form.
         {
             tmrLoadingScreen.Enabled = false;
             tmrLoadingScreen.Dispose();

@@ -34,7 +34,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             return timesTableArray;
         }
 
-        public int[] GetTwoNumbers(Operation operation, Magnitude magnitude, PostiveOrNegative positiveOrNegative) //This method produces a two number array which satisfy the settings set by the user.
+        public int[] GetTwoNumbers(Operation operation, Magnitude magnitude, PostiveOrNegative positiveOrNegative) //This method returns a two number array which satisfy the settings set by the user.
         {
             Random random = new Random();
             int[] twoNumbers = new int[2];

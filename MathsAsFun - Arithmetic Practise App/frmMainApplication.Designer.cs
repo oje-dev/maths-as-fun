@@ -76,9 +76,9 @@
             // 
             // btnShowTimesTable
             // 
-            this.btnShowTimesTable.Location = new System.Drawing.Point(460, 39);
+            this.btnShowTimesTable.Location = new System.Drawing.Point(460, 41);
             this.btnShowTimesTable.Name = "btnShowTimesTable";
-            this.btnShowTimesTable.Size = new System.Drawing.Size(244, 23);
+            this.btnShowTimesTable.Size = new System.Drawing.Size(244, 29);
             this.btnShowTimesTable.TabIndex = 1;
             this.btnShowTimesTable.Text = "Show Grid";
             this.btnShowTimesTable.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             // lblNeedHelp
             // 
             this.lblNeedHelp.AutoSize = true;
-            this.lblNeedHelp.Location = new System.Drawing.Point(457, 21);
+            this.lblNeedHelp.Location = new System.Drawing.Point(457, 25);
             this.lblNeedHelp.Name = "lblNeedHelp";
             this.lblNeedHelp.Size = new System.Drawing.Size(247, 13);
             this.lblNeedHelp.TabIndex = 0;
