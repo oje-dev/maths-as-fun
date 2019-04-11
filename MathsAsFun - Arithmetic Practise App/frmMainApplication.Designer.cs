@@ -275,7 +275,7 @@
             this.txtAnswer.Location = new System.Drawing.Point(370, 221);
             this.txtAnswer.MaxLength = 8;
             this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.Size = new System.Drawing.Size(171, 39);
+            this.txtAnswer.Size = new System.Drawing.Size(178, 39);
             this.txtAnswer.TabIndex = 11;
             this.txtAnswer.Visible = false;
             this.txtAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAnswer_KeyDown);
@@ -285,11 +285,11 @@
             this.lblIncorrect.AutoSize = true;
             this.lblIncorrect.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
-            this.lblIncorrect.Location = new System.Drawing.Point(547, 224);
+            this.lblIncorrect.Location = new System.Drawing.Point(554, 224);
             this.lblIncorrect.Name = "lblIncorrect";
-            this.lblIncorrect.Size = new System.Drawing.Size(165, 32);
+            this.lblIncorrect.Size = new System.Drawing.Size(150, 32);
             this.lblIncorrect.TabIndex = 13;
-            this.lblIncorrect.Text = "-99980001!";
+            this.lblIncorrect.Text = "-1000000!";
             this.lblIncorrect.Visible = false;
             // 
             // lblFirstNumber
@@ -370,7 +370,7 @@
             // imgGreenTick
             // 
             this.imgGreenTick.Image = ((System.Drawing.Image)(resources.GetObject("imgGreenTick.Image")));
-            this.imgGreenTick.Location = new System.Drawing.Point(547, 221);
+            this.imgGreenTick.Location = new System.Drawing.Point(556, 221);
             this.imgGreenTick.Name = "imgGreenTick";
             this.imgGreenTick.Size = new System.Drawing.Size(40, 39);
             this.imgGreenTick.TabIndex = 24;
