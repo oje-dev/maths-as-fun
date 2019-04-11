@@ -417,7 +417,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     timeRemaining = GetTimeAllowed();
                     lblTimer.Text = Convert.ToString(timeRemaining / 1000);
                     TimeWarningColourChange();
-                    lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
+                    lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2); //Centres the timer text within its parent panel.
                     tmrTimedMode.Enabled = true;
                 }
                 else
@@ -436,7 +436,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 lblTimerText.Visible = false;
                 lblTimer.Visible = false;
                 lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
-                lblScore.Text = "The maximum number of questions have been answered.\nPlease press the practise button to start a new session.";
+                lblScore.Text = "The maximum number of questions have been answered.\nPlease press the practise button to start a new session."; //This message is shown if the total number of answers this session exceeds 1000.
             }
         }
 
