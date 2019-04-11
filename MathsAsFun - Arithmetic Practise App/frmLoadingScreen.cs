@@ -12,7 +12,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     public partial class FrmLoadingScreen : Form
     {
-        private static int timeElapsed = 0; //
+        private static int timeElapsed = 0; //A class variable since it is used by multiple methods within this class.
 
         public FrmLoadingScreen()
         {
@@ -24,7 +24,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             CenterToScreen();
         }
 
-        private void TmrProgressBar_Tick(object sender, EventArgs e) //Fills up the progress bar when the timer ticks 
+        private void TmrProgressBar_Tick(object sender, EventArgs e) //Fills up the progress bar randomly as the timer ticks and starts tmrLoadingScreen when the progress bar is full.
         {
             if (prgLoading.Value == 80)
             {
