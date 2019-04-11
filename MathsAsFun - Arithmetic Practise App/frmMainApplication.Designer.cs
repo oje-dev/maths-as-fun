@@ -273,6 +273,7 @@
             // 
             this.txtAnswer.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnswer.Location = new System.Drawing.Point(370, 221);
+            this.txtAnswer.MaxLength = 8;
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(171, 39);
             this.txtAnswer.TabIndex = 11;

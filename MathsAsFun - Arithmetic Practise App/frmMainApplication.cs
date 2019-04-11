@@ -12,10 +12,10 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     public partial class FrmMainApplication : Form
     {
-        readonly Functions functions = new Functions();
-        int totalQuestionsAnswered = 0;
-        int totalQuestionsCorrect = 0;
-        int timeRemaining;
+        //These class member variables are used many methods within this class.
+        private static int totalQuestionsAnswered = 0;
+        private static int totalQuestionsCorrect = 0;
+        private static int timeRemaining;
 
         public FrmMainApplication()
         {
@@ -74,6 +74,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void DisplaySum()
         {
+            Functions functions = new Functions();
             int[] twoNumberArray;
             if (rdbPositive.Checked == true)
             {
@@ -276,14 +277,14 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        public double GetPercentage()
+        private double GetPercentage()
         {
             double percentageCorrect = (Convert.ToDouble(totalQuestionsCorrect) / Convert.ToDouble(totalQuestionsAnswered)) * 100.0;
             percentageCorrect = Math.Round(percentageCorrect, 2);
             return percentageCorrect;
         }
 
-        public void SetScore(double percentageCorrect)
+        private void SetScore(double percentageCorrect)
         {
             lblScore.Text = Convert.ToString(totalQuestionsCorrect) + "/" + Convert.ToString(totalQuestionsAnswered) + " " + Convert.ToString(percentageCorrect) + "%";
             if (percentageCorrect >= 80.0)
@@ -303,7 +304,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        public int GetTimeAllowed()
+        private int GetTimeAllowed()
         {
             int getTimeRemaining;
             if (rdbAddition.Checked == true)
@@ -401,30 +402,41 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void AcceptAnswer()
         {
-            if (lblScore.Visible == false)
+            if (totalQuestionsAnswered < 1000)
             {
-                lblScore.Visible = true;
-            }
-            if (rdbTimedMode.Checked == true)
-            {
-                RestartTimer();
-                lblTimerText.Visible = true;
-                lblTimer.Visible = true;
-                timeRemaining = GetTimeAllowed();
-                lblTimer.Text = Convert.ToString(timeRemaining / 1000);
-                TimeWarningColourChange();
-                lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
-                tmrTimedMode.Enabled = true;
+                if (lblScore.Visible == false)
+                {
+                    lblScore.Visible = true;
+                }
+                if (rdbTimedMode.Checked == true)
+                {
+                    RestartTimer();
+                    lblTimerText.Visible = true;
+                    lblTimer.Visible = true;
+                    timeRemaining = GetTimeAllowed();
+                    lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+                    TimeWarningColourChange();
+                    lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
+                    tmrTimedMode.Enabled = true;
+                }
+                else
+                {
+                    tmrTimedMode.Enabled = false;
+                    lblTimer.Visible = false;
+                    lblTimerText.Visible = false;
+                }
+                CheckAnswer(GetAnswer());
+                SetScore(GetPercentage());
+                DisplaySum();
             }
             else
             {
                 tmrTimedMode.Enabled = false;
-                lblTimer.Visible = false;
                 lblTimerText.Visible = false;
+                lblTimer.Visible = false;
+                lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
+                lblScore.Text = "The maximum number of questions have been answered.\nPlease press the practise button to start a new session.";
             }
-            CheckAnswer(GetAnswer());
-            SetScore(GetPercentage());
-            DisplaySum();
         }
 
         private void TimeWarningColourChange()

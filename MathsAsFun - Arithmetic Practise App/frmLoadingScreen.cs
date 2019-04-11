@@ -12,7 +12,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     public partial class FrmLoadingScreen : Form
     {
-        int timeElapsed = 0;
+        private static int timeElapsed = 0; //
 
         public FrmLoadingScreen()
         {
@@ -24,7 +24,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             CenterToScreen();
         }
 
-        private void TmrProgressBar_Tick(object sender, EventArgs e)
+        private void TmrProgressBar_Tick(object sender, EventArgs e) //Fills up the progress bar when the timer ticks 
         {
             if (prgLoading.Value == 80)
             {

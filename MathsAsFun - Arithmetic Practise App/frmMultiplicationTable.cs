@@ -12,8 +12,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     public partial class FrmMultiplicationTable : Form
     {
-        readonly Functions functions = new Functions();
-
         public FrmMultiplicationTable()
         {
             InitializeComponent();
@@ -30,6 +28,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void CreateTable()
         {
+            Functions functions = new Functions();
             int selectedTimesTable = Convert.ToInt16(char.ToString(cboTimesTable.Text.ToCharArray()[0]) + char.ToString(cboTimesTable.Text.ToCharArray()[1]));
             grdTimesTable.ColumnCount = selectedTimesTable + 1;
             grdTimesTable.RowCount = grdTimesTable.ColumnCount;
