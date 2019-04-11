@@ -59,6 +59,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 lblTimer.Visible = true;
                 timeRemaining = GetTimeAllowed();
                 lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+                TimeWarningColourChange();
                 lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
                 tmrTimedMode.Enabled = true;
             }
@@ -372,6 +373,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
         {
             timeRemaining -= 1000;
             lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+            TimeWarningColourChange();
             lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
             if (timeRemaining == 0)
             {
@@ -410,6 +412,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 lblTimer.Visible = true;
                 timeRemaining = GetTimeAllowed();
                 lblTimer.Text = Convert.ToString(timeRemaining / 1000);
+                TimeWarningColourChange();
                 lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
                 tmrTimedMode.Enabled = true;
             }
@@ -424,5 +427,16 @@ namespace MathsAsFun___Arithmetic_Practise_App
             DisplaySum();
         }
 
+        private void TimeWarningColourChange()
+        {
+            if (timeRemaining <= 3000)
+            {
+                lblTimer.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblTimer.ForeColor = SystemColors.ControlText;
+            }
+        }
     }
 }
