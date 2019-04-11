@@ -29,7 +29,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void FrmMainApplication_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //Since the loading screen is the starting form of the application, this line is required to ensure the application exits when the main form is closed.
         }
 
         private void BtnTimesTable_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 timeRemaining = GetTimeAllowed();
                 lblTimer.Text = Convert.ToString(timeRemaining / 1000);
                 TimeWarningColourChange();
-                lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
+                lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2); //Centres the timer label within its parent panel.
                 tmrTimedMode.Enabled = true;
             }
             else
@@ -72,10 +72,11 @@ namespace MathsAsFun___Arithmetic_Practise_App
             DisplaySum();
         }
 
-        private void DisplaySum()
+        private void DisplaySum() //This method retrieves the two number array from the functions class. The settings selected by the user dictate the numners generated. They are then shown on the form.
         {
             Functions functions = new Functions();
             int[] twoNumberArray;
+            //The following statements call the GetTwoNumbers method in the Functions class. The parameters passed in are decided by the combinations of radio buttons selected by the user on the form.
             if (rdbPositive.Checked == true)
             {
                 if (rdbAddition.Checked == true)
@@ -212,11 +213,11 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
             lblFirstNumber.Text = Convert.ToString(twoNumberArray[0]);
             lblSecondNumber.Text = Convert.ToString(twoNumberArray[1]);
-            lblFirstNumber.Location = new Point((pnlFirstNumber.Width - lblFirstNumber.Width) / 2, ((pnlFirstNumber.Height - lblFirstNumber.Height)) / 2);
-            lblSecondNumber.Location = new Point((pnlSecondNumber.Width - lblSecondNumber.Width) / 2, ((pnlSecondNumber.Height - lblSecondNumber.Height)) / 2);
+            lblFirstNumber.Location = new Point((pnlFirstNumber.Width - lblFirstNumber.Width) / 2, ((pnlFirstNumber.Height - lblFirstNumber.Height)) / 2); //This line centres the first number within its parent panel.
+            lblSecondNumber.Location = new Point((pnlSecondNumber.Width - lblSecondNumber.Width) / 2, ((pnlSecondNumber.Height - lblSecondNumber.Height)) / 2); //This line does the same with the second number.
         }
 
-        private int GetAnswer()
+        private int GetAnswer() //This method return the correct answer based on the two numbers shown and the operation selected.
         {
             int answer;
             if (lblOperator.Text == "+")
@@ -238,12 +239,12 @@ namespace MathsAsFun___Arithmetic_Practise_App
             return answer;
         }
 
-        private void CheckAnswer(int answer)
+        private void CheckAnswer(int answer) //This method checks that the answer given by the user is correct or incorrect.
         {
-            totalQuestionsAnswered += 1;
+            totalQuestionsAnswered += 1; //Every question answered adds one to the total.
             if (txtAnswer.Text == Convert.ToString(answer))
             {
-                totalQuestionsCorrect += 1;
+                totalQuestionsCorrect += 1; //Only correct answers increase this variable.
                 lblIncorrect.Visible = false;
                 imgGreenTick.Visible = true;
             }
@@ -251,16 +252,16 @@ namespace MathsAsFun___Arithmetic_Practise_App
             {
                 imgGreenTick.Visible = false;
                 lblIncorrect.Visible = true;
-                lblIncorrect.Text = Convert.ToString(answer) + "!";
+                lblIncorrect.Text = Convert.ToString(answer) + "!"; //The correct answer is displayed if the user enters the incorrect answer.
             }
             txtAnswer.Text = null;
         }
 
         private void TxtAnswer_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter) //This allows the user to press the enter key to submit their answer.
             {
-                if (totalQuestionsAnswered < 1000)
+                if (totalQuestionsAnswered < 1000) //To avoid the user holding down the enter key and rapidly answering many questions, a limit is set to 1000 questions per session.
                 {
                     AcceptAnswer();
                     e.Handled = true;
@@ -272,39 +273,39 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblTimerText.Visible = false;
                     lblTimer.Visible = false;
                     lblScore.Font = new Font(lblScore.Font.FontFamily, 9);
-                    lblScore.Text = "The maximum number of questions have been answered.\nPlease press the practise button to start a new session.";
+                    lblScore.Text = "The maximum number of questions have been answered.\nPlease press the practise button to start a new session."; //A message is shown telling the user that 1000 questions have been answered.
                 }
             }
         }
 
-        private double GetPercentage()
+        private double GetPercentage() //This function returns the current percentage of correct answers to toal questions answered.
         {
             double percentageCorrect = (Convert.ToDouble(totalQuestionsCorrect) / Convert.ToDouble(totalQuestionsAnswered)) * 100.0;
-            percentageCorrect = Math.Round(percentageCorrect, 2);
+            percentageCorrect = Math.Round(percentageCorrect, 2); //The percentage is rounded to two decimal places.
             return percentageCorrect;
         }
 
-        private void SetScore(double percentageCorrect)
+        private void SetScore(double percentageCorrect) //This function takes current percentage and updates the label on the form according to how well they are doing.
         {
             lblScore.Text = Convert.ToString(totalQuestionsCorrect) + "/" + Convert.ToString(totalQuestionsAnswered) + " " + Convert.ToString(percentageCorrect) + "%";
-            if (percentageCorrect >= 80.0)
+            if (percentageCorrect >= 80.0) //80% and above correctly answered questions shows a green well done message.
             {
                 lblScore.Text += " Keep it up!";
                 lblScore.ForeColor = Color.Green;
             }
-            else if (percentageCorrect >= 60)
+            else if (percentageCorrect >= 60) //60% or over but below 80% shows a yellow message and an encouraging message.
             {
                 lblScore.Text += " Keep Going!";
-                lblScore.ForeColor = ColorTranslator.FromHtml("#FAB005");
+                lblScore.ForeColor = Color.FromArgb(250, 176, 5);
             }
-            else
+            else //Less than 60% shows a red, try harder message.
             {
                 lblScore.Text += " Try Harder!";
                 lblScore.ForeColor = Color.Red;
             }
         }
 
-        private int GetTimeAllowed()
+        private int GetTimeAllowed() //This function returns the time remaining based on the difficulty of questions selected by the user.
         {
             int getTimeRemaining;
             if (rdbAddition.Checked == true)
@@ -367,15 +368,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     getTimeRemaining = 45;
                 }
             }
-            return getTimeRemaining *= 1000;
+            return getTimeRemaining *= 1000; //The total time allowed for each question is multiplied by 1000 to convert it to milliseconds.
         }
 
         private void TmrTimedMode_Tick(object sender, EventArgs e)
         {
-            timeRemaining -= 1000;
+            timeRemaining -= 1000; //The timer ticks every second and so reduces the time remaining by 1000 milliseconds.
             lblTimer.Text = Convert.ToString(timeRemaining / 1000);
             TimeWarningColourChange();
-            lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2);
+            lblTimer.Location = new Point((pnlTimer.Width - lblTimer.Width) / 2, ((pnlTimer.Height - lblTimer.Height)) / 2); //This line centres the timer label within its parent panel.
             if (timeRemaining == 0)
             {
                 RestartTimer();
@@ -385,22 +386,22 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void FrmMainApplication_Activated(object sender, EventArgs e)
         {
-            tmrTimedMode.Enabled = true;
+            tmrTimedMode.Enabled = true; //This stops the timer ticking if the multiplication grid is opened or the form is minimised.
         }
 
         private void FrmMainApplication_Deactivate(object sender, EventArgs e)
         {
-            tmrTimedMode.Enabled = false;
+            tmrTimedMode.Enabled = false; //This line restarts the timer when the form is active again.
         }
 
-        private void RestartTimer()
+        private void RestartTimer() //This method restarts the timer. It is called when the timer hits 0 or when the user submits an answer.
         {
             tmrTimedMode.Enabled = false;
             timeRemaining = GetTimeAllowed();
             tmrTimedMode.Enabled = true;
         }
 
-        private void AcceptAnswer()
+        private void AcceptAnswer() //This function is called when the user presses enter to submit their answer or when the timer runs down to 0.
         {
             if (totalQuestionsAnswered < 1000)
             {
@@ -439,7 +440,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        private void TimeWarningColourChange()
+        private void TimeWarningColourChange() //This function changes the colour of the timer to red when there is 3 seconds or less remaining, and changes it back to black otherwise.
         {
             if (timeRemaining <= 3000)
             {

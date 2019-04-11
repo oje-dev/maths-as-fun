@@ -40,7 +40,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void TmrLoadingScreen_Tick(object sender, EventArgs e)
         {
-            switch (timeElapsed)
+            switch (timeElapsed) //Dictates what events occur at set intervals of time.
             {
                 case 1000:
                     imgLogo.Visible = false;
