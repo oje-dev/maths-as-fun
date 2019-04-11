@@ -45,11 +45,12 @@ namespace MathsAsFun___Arithmetic_Practise_App
                 case 1000: //After one second the entire look of the form is changed to give the appearance that a new form has been opened.
                     imgLogo.Visible = false;
                     prgLoading.Visible = false;
-                    lblCopyrightMessage.Visible = false;
                     Cursor = default;
                     FormBorderStyle = FormBorderStyle.FixedSingle;
                     Width = 965;
                     Height = 395;
+                    lblCopyrightMessage.Left = (ClientSize.Width - lblCopyrightMessage.Width) / 2;
+                    lblCopyrightMessage.Top = (ClientSize.Height - lblCopyrightMessage.Height) - 10;
                     Location = new Point(Location.X - 200, Location.Y - 100);
                     break;
                 case 1010:
