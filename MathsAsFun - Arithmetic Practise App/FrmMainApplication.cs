@@ -12,7 +12,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 {
     public partial class FrmMainApplication : Form
     {
-        //These class member variables are used many methods within this class.
+        //These class member variables are used by many methods within this class.
         private static int totalQuestionsAnswered = 0;
         private static int totalQuestionsCorrect = 0;
         private static int timeRemaining;
@@ -38,7 +38,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             frmMultiplicationTable.ShowDialog();
         }
 
-        private void BtnStart_Click(object sender, EventArgs e)
+        private void BtnStart_Click(object sender, EventArgs e) //Starts a new session of questions.
         {
             lblFirstNumber.Visible = true;
             lblOperator.Visible = true;
@@ -72,7 +72,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             DisplaySum();
         }
 
-        private void DisplaySum() //This method retrieves the two number array from the functions class. The settings selected by the user dictate the numners generated. They are then shown on the form.
+        private void DisplaySum() //This method retrieves the two number array from the functions class. The settings selected by the user dictate the numbers generated. They are then shown on the form.
         {
             Functions functions = new Functions();
             int[] twoNumberArray;
@@ -217,7 +217,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             lblSecondNumber.Location = new Point((pnlSecondNumber.Width - lblSecondNumber.Width) / 2, ((pnlSecondNumber.Height - lblSecondNumber.Height)) / 2); //This line does the same with the second number.
         }
 
-        private int GetAnswer() //This method return the correct answer based on the two numbers shown and the operation selected.
+        private int GetAnswer() //This method returns the correct answer based on the two numbers shown and the operation selected.
         {
             int answer;
             if (lblOperator.Text == "+")
@@ -285,7 +285,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             return percentageCorrect;
         }
 
-        private void SetScore(double percentageCorrect) //This function takes current percentage and updates the label on the form according to how well they are doing.
+        private void SetScore(double percentageCorrect) //This function takes the current percentage and updates the label on the form according to how well the user is doing.
         {
             lblScore.Text = Convert.ToString(totalQuestionsCorrect) + "/" + Convert.ToString(totalQuestionsAnswered) + " " + Convert.ToString(percentageCorrect) + "%";
             if (percentageCorrect >= 80.0) //80% and above correctly answered questions shows a green well done message.
@@ -401,7 +401,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             tmrTimedMode.Enabled = true;
         }
 
-        private void AcceptAnswer() //This function is called when the user presses enter to submit their answer or when the timer runs down to 0.
+        private void AcceptAnswer() //This method is called when the user presses enter to submit their answer or when the timer runs down to 0.
         {
             if (totalQuestionsAnswered < 1000)
             {
@@ -440,7 +440,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        private void TimeWarningColourChange() //This function changes the colour of the timer to red when there is 3 seconds or less remaining, and changes it back to black otherwise.
+        private void TimeWarningColourChange() //This function changes the colour of the timer to red when there are 3 seconds or fewer remaining, and changes it back to black otherwise.
         {
             if (timeRemaining <= 3000)
             {

@@ -69,8 +69,8 @@ namespace MathsAsFun___Arithmetic_Practise_App
                                 {
                                     twoNumbers[i] = random.Next(11);
                                 }
-                            } while (twoNumbers[twoNumbers.Length - 2] == 0 || twoNumbers[twoNumbers.Length - 1] == 0);
-                        } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0);
+                            } while (twoNumbers[twoNumbers.Length - 2] == 0 || twoNumbers[twoNumbers.Length - 1] == 0); //This loop here avoids any 0s being generated with division questions as this would cause an error.
+                        } while (twoNumbers[twoNumbers.Length - 2] % twoNumbers[twoNumbers.Length - 1] != 0); //This line ensures that the division question generated will produce a whole number answer. These lines are repeated whenever a division question is being generated.
                     }
                 }
                 else if (magnitude == Magnitude.Hundred)
