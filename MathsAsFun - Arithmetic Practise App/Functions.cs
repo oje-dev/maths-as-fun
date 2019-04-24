@@ -43,10 +43,6 @@ namespace MathsAsFun___Arithmetic_Practise_App
             {
                 positiveOrNegative = PostiveOrNegative.Positive;
             }
-            if (operation == Operation.Subtraction) //This ensures that negative numbers can be generated when subtraction is selected, regardless of the positive or negative user settings.
-            {
-                positiveOrNegative = PostiveOrNegative.Negative;
-            }
             //The following statements will generate numbers based on the overall settings given by the user.
             if (positiveOrNegative == PostiveOrNegative.Positive)
             {
