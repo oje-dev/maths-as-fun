@@ -49,8 +49,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     FormBorderStyle = FormBorderStyle.FixedSingle;
                     Width = 965;
                     Height = 395;
-                    lblCopyrightMessage.Left = (ClientSize.Width - lblCopyrightMessage.Width) / 2;
-                    lblCopyrightMessage.Top = (ClientSize.Height - lblCopyrightMessage.Height) - 10;
+                    lblCopyrightMessage.Visible = false;
                     Location = new Point(Location.X - 200, Location.Y - 100);
                     break;
                 case 1010:
