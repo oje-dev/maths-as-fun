@@ -72,11 +72,11 @@ namespace MathsAsFun___Arithmetic_Practise_App
             DisplaySum();
         }
 
-        private void DisplaySum() //This method retrieves the two number array from the functions class. The settings selected by the user dictate the numbers generated. They are then shown on the form.
+        private void DisplaySum() //This method retrieves the two number array from the methods class. The settings selected by the user dictate the numbers generated. They are then shown on the form.
         {
-            Functions functions = new Functions();
+            Methods methods = new Methods();
             int[] twoNumberArray;
-            //The following statements call the GetTwoNumbers method in the Functions class. The parameters passed in are decided by the combinations of radio buttons selected by the user on the form.
+            //The following statements call the GetTwoNumbers method in the Methods class. The parameters passed in are decided by the combinations of radio buttons selected by the user on the form.
             if (rdbPositive.Checked == true)
             {
                 if (rdbAddition.Checked == true)
@@ -84,15 +84,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblOperator.Text = "+";
                     if (rdbTen.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Addition, Methods.Magnitude.Ten, Methods.PostiveOrNegative.Positive);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Addition, Methods.Magnitude.Hundred, Methods.PostiveOrNegative.Positive);
                     }
                     else
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Addition, Methods.Magnitude.Thousand, Methods.PostiveOrNegative.Positive);
                     }
                 }
                 else if (rdbSubtraction.Checked == true)
@@ -100,15 +100,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblOperator.Text = "-";
                     if (rdbTen.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Subtraction, Methods.Magnitude.Ten, Methods.PostiveOrNegative.Positive);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Subtraction, Methods.Magnitude.Hundred, Methods.PostiveOrNegative.Positive);
                     }
                     else
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Subtraction, Methods.Magnitude.Thousand, Methods.PostiveOrNegative.Positive);
                     }
                 }
                 else if (rdbMultiplication.Checked == true)
@@ -116,15 +116,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblOperator.Text = "×";
                     if (rdbTen.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Multiplication, Methods.Magnitude.Ten, Methods.PostiveOrNegative.Positive);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Multiplication, Methods.Magnitude.Hundred, Methods.PostiveOrNegative.Positive);
                     }
                     else
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Multiplication, Methods.Magnitude.Thousand, Methods.PostiveOrNegative.Positive);
                     }
                 }
                 else
@@ -132,15 +132,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblOperator.Text = "÷";
                     if (rdbTen.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Division, Methods.Magnitude.Ten, Methods.PostiveOrNegative.Positive);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Division, Methods.Magnitude.Hundred, Methods.PostiveOrNegative.Positive);
                     }
                     else
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Positive);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Division, Methods.Magnitude.Thousand, Methods.PostiveOrNegative.Positive);
                     }
                 }
             }
@@ -151,15 +151,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblOperator.Text = "+";
                     if (rdbTen.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Addition, Methods.Magnitude.Ten, Methods.PostiveOrNegative.Negative);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Addition, Methods.Magnitude.Hundred, Methods.PostiveOrNegative.Negative);
                     }
                     else
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Addition, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Addition, Methods.Magnitude.Thousand, Methods.PostiveOrNegative.Negative);
                     }
                 }
                 else if (rdbSubtraction.Checked == true)
@@ -167,15 +167,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblOperator.Text = "-";
                     if (rdbTen.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Subtraction, Methods.Magnitude.Ten, Methods.PostiveOrNegative.Negative);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Subtraction, Methods.Magnitude.Hundred, Methods.PostiveOrNegative.Negative);
                     }
                     else
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Subtraction, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Subtraction, Methods.Magnitude.Thousand, Methods.PostiveOrNegative.Negative);
                     }
                 }
                 else if (rdbMultiplication.Checked == true)
@@ -183,15 +183,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblOperator.Text = "×";
                     if (rdbTen.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Multiplication, Methods.Magnitude.Ten, Methods.PostiveOrNegative.Negative);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Multiplication, Methods.Magnitude.Hundred, Methods.PostiveOrNegative.Negative);
                     }
                     else
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Multiplication, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Multiplication, Methods.Magnitude.Thousand, Methods.PostiveOrNegative.Negative);
                     }
                 }
                 else
@@ -199,15 +199,15 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     lblOperator.Text = "÷";
                     if (rdbTen.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Ten, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Division, Methods.Magnitude.Ten, Methods.PostiveOrNegative.Negative);
                     }
                     else if (rdbHundred.Checked == true)
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Hundred, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Division, Methods.Magnitude.Hundred, Methods.PostiveOrNegative.Negative);
                     }
                     else
                     {
-                        twoNumberArray = functions.GetTwoNumbers(Functions.Operation.Division, Functions.Magnitude.Thousand, Functions.PostiveOrNegative.Negative);
+                        twoNumberArray = methods.GetTwoNumbers(Methods.Operation.Division, Methods.Magnitude.Thousand, Methods.PostiveOrNegative.Negative);
                     }
                 }
             }
@@ -278,14 +278,14 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        private double GetPercentage() //This function returns the current percentage of correct answers to toal questions answered.
+        private double GetPercentage() //This method returns the current percentage of correct answers to toal questions answered.
         {
             double percentageCorrect = (Convert.ToDouble(totalQuestionsCorrect) / Convert.ToDouble(totalQuestionsAnswered)) * 100.0;
             percentageCorrect = Math.Round(percentageCorrect, 2); //The percentage is rounded to two decimal places.
             return percentageCorrect;
         }
 
-        private void SetScore(double percentageCorrect) //This function takes the current percentage and updates the label on the form according to how well the user is doing.
+        private void SetScore(double percentageCorrect) //This method takes the current percentage and updates the label on the form according to how well the user is doing.
         {
             lblScore.Text = Convert.ToString(totalQuestionsCorrect) + "/" + Convert.ToString(totalQuestionsAnswered) + " " + Convert.ToString(percentageCorrect) + "%";
             if (percentageCorrect >= 80.0) //80% and above correctly answered questions shows a green well done message.
@@ -305,7 +305,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        private int GetTimeAllowed() //This function returns the time remaining based on the difficulty of questions selected by the user.
+        private int GetTimeAllowed() //This method returns the time remaining based on the difficulty of questions selected by the user.
         {
             int getTimeRemaining;
             if (rdbAddition.Checked == true)
@@ -440,7 +440,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             }
         }
 
-        private void TimeWarningColourChange() //This function changes the colour of the timer to red when there are 3 seconds or fewer remaining, and changes it back to black otherwise.
+        private void TimeWarningColourChange() //This method changes the colour of the timer to red when there are 3 seconds or fewer remaining, and changes it back to black otherwise.
         {
             if (timeRemaining <= 3000)
             {

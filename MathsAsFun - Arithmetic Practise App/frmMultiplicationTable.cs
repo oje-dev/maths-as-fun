@@ -26,9 +26,9 @@ namespace MathsAsFun___Arithmetic_Practise_App
             CreateTable();
         }
 
-        private void CreateTable() //This method creates the multiplication table based on the array created in the functions class.
+        private void CreateTable() //This method creates the multiplication table based on the array created in the methods class.
         {
-            Functions functions = new Functions();
+            Methods methods = new Methods();
             int selectedTimesTable = Convert.ToInt16(char.ToString(cboTimesTable.Text.ToCharArray()[0]) + char.ToString(cboTimesTable.Text.ToCharArray()[1])); //Converts the text in the combo box to an integer which is used to generate the numbers for the grid.
             grdTimesTable.ColumnCount = selectedTimesTable + 1; //The column count is set to be one more than the selected times table, this accounts for the yellow header row and column.
             grdTimesTable.RowCount = grdTimesTable.ColumnCount; //The number of rows is set to be the same as the number of columns.
@@ -45,7 +45,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             grdTimesTable.Height = totalRowHeight + 10; //based on the number of rows and columns so that it can be centred in the form.
             grdTimesTable.Left = (ClientSize.Width - grdTimesTable.Width) / 2;
             grdTimesTable.Top = ((ClientSize.Height - grdTimesTable.Height) / 2) + 12;
-            int[,] timesTableArray = functions.TimesTableArrayFunction(selectedTimesTable); //Gets the array from the functions class.
+            int[,] timesTableArray = methods.TimesTableArrayMethod(selectedTimesTable); //Gets the array from the methods class.
             //The following loops fill in the grid with the numbers from the array.
             for (int i = 0; i < selectedTimesTable; i++)
             {
