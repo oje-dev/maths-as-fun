@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MathsAsFun___Arithmetic_Practise_App
 {
@@ -16,7 +12,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         public enum PostiveOrNegative { Positive, Negative };
 
-        public int[,] TimesTableArrayFunction(int timesTable) //This method returns a two-dimensional array of numbers which are used to create the multiplication grid.
+        public int[,] TimesTableArrayMethod(int timesTable) //This method returns a two-dimensional array of numbers which are used to create the multiplication grid.
         {
             int[,] timesTableArray = new int[timesTable, timesTable];
             for (int i = 0; i < timesTable; i++) //The first loop generates the first row and first column of numbers.
