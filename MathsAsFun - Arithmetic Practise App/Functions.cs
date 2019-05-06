@@ -28,7 +28,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
             {
                 for (int j = 0; j < timesTable; j++) //This nested loop then iterates through each columm.
                 {
-                    timesTableArray[i, j] = timesTableArray[i, 0] * timesTableArray[j, 0]; //This line calculates the correct number to fill in each index in the array.
+                    timesTableArray[i, j] = timesTableArray[i, 0] * timesTableArray[j, 0]; //This line calculates the correct number to fill in each element of the array by multiplying the two corresponding numbers in the first column and row of the grid.
                 }
             }
             return timesTableArray;
