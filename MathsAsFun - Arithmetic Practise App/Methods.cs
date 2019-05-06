@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathsAsFun___Arithmetic_Practise_App
 {
-    class Functions
+    class Methods
     {
         /*Enumeration is used in order to make the code more readable, each enum corresponds to a setting when generating questions. 
         The alternative would be to use integer values which would become hard to follow.*/

@@ -85,7 +85,7 @@
     <Compile Include="FrmMultiplicationTable.Designer.cs">
       <DependentUpon>FrmMultiplicationTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functions.cs" />
+    <Compile Include="Methods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLoadingScreen.resx">
