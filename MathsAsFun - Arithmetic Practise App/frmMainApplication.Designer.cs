@@ -196,7 +196,7 @@
             // rdbThousand
             // 
             this.rdbThousand.AutoSize = true;
-            this.rdbThousand.Location = new System.Drawing.Point(7, 65);
+            this.rdbThousand.Location = new System.Drawing.Point(6, 88);
             this.rdbThousand.Name = "rdbThousand";
             this.rdbThousand.Size = new System.Drawing.Size(71, 17);
             this.rdbThousand.TabIndex = 2;
@@ -206,7 +206,7 @@
             // rdbHundred
             // 
             this.rdbHundred.AutoSize = true;
-            this.rdbHundred.Location = new System.Drawing.Point(7, 42);
+            this.rdbHundred.Location = new System.Drawing.Point(6, 53);
             this.rdbHundred.Name = "rdbHundred";
             this.rdbHundred.Size = new System.Drawing.Size(49, 17);
             this.rdbHundred.TabIndex = 1;
@@ -217,7 +217,7 @@
             // 
             this.rdbTen.AutoSize = true;
             this.rdbTen.Checked = true;
-            this.rdbTen.Location = new System.Drawing.Point(7, 20);
+            this.rdbTen.Location = new System.Drawing.Point(6, 19);
             this.rdbTen.Name = "rdbTen";
             this.rdbTen.Size = new System.Drawing.Size(49, 17);
             this.rdbTen.TabIndex = 0;
