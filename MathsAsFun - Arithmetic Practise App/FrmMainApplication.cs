@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -241,6 +242,7 @@ namespace MathsAsFun___Arithmetic_Practise_App
 
         private void CheckAnswer(int answer) //This method checks that the answer given by the user is correct or incorrect.
         {
+            Regex validInput = new Regex("^[0-9@-]${1,7}");
             totalQuestionsAnswered += 1; //Every question answered adds one to the total.
             if (txtAnswer.Text == Convert.ToString(answer))
             {
@@ -252,7 +254,14 @@ namespace MathsAsFun___Arithmetic_Practise_App
             {
                 imgGreenTick.Visible = false;
                 lblIncorrect.Visible = true;
-                lblIncorrect.Text = Convert.ToString(answer) + "!"; //The correct answer is displayed if the user enters the incorrect answer.
+                if (!validInput.IsMatch(txtAnswer.Text))
+                {
+                    lblIncorrect.Text = "Invalid";
+                }
+                else
+                {
+                    lblIncorrect.Text = Convert.ToString(answer) + "!"; //The correct answer is displayed if the user enters the incorrect answer.
+                }
             }
             txtAnswer.Text = null;
         }
