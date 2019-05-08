@@ -61,10 +61,12 @@ namespace MathsAsFun___Arithmetic_Practise_App
                     }
                     else if (i == j)
                     {
-                        grdTimesTable.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                        grdTimesTable.Rows[i].Cells[j].Style.BackColor = Color.Red; //This line ensures that the first square number cell is highlighted red.
+                        grdTimesTable.Rows[i].Cells[j].Style.ForeColor = Color.White; //This line ensures that the text in the first square number cell is white.
                         if (i == selectedTimesTable - 1)
                         {
-                            grdTimesTable.Rows[i + 1].Cells[j + 1].Style.BackColor = Color.Red; //This line ensures that the square numbers are highlighted red.
+                            grdTimesTable.Rows[i + 1].Cells[j + 1].Style.BackColor = Color.Red; //This line ensures that the square number cells are highlighted red.
+                            grdTimesTable.Rows[i + 1].Cells[j + 1].Style.ForeColor = Color.White; //This line ensures that the text in the square number cells are white.
                         }
                     }
                     grdTimesTable.Rows[i + 1].Cells[j + 1].Value = timesTableArray[i, j]; //This line cets the value of each cell to the corresponding array element.
